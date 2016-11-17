@@ -3,9 +3,9 @@ from bs4 import BeautifulSoup
 from urllib2 import urlopen
 import pickle
 
-def subreddit_suscribers():
+def subreddit_subscribers():
   base_url = 'http://redditmetrics.com/top/offset/'
-  suscribers = dict()
+  subscribers = dict()
   success = True
   page = 0
 
@@ -20,26 +20,26 @@ def subreddit_suscribers():
     for ranking in rankings:
       subreddit = [td for td in ranking.findAll('td')]
       name = subreddit[1].a['href']
-      num_suscribers = subreddit[2].find(text = True)
-      num_suscribers = int(num_suscribers.replace(',', ''))
+      num_subscribers = subreddit[2].find(text = True)
+      num_subscribers = int(num_subscribers.replace(',', ''))
 
-      if num_suscribers < 1000:
+      if num_subscribers < 1000:
         success = False
         break
 
-      suscribers[name] = int(num_suscribers)
+      subscribers[name] = int(num_subscribers)
 
     if not success:
       break
 
     page += 1
 
-  suscribers_file = open('subreddit_suscribers.txt', 'wb')
-  pickle.dump(suscribers, suscribers_file)
-  suscribers_file.close()
+  subscribers_file = open('subreddit_subscribers.txt', 'wb')
+  pickle.dump(subscribers, subscribers_file)
+  subscribers_file.close()
 
 def main():
-  subreddit_suscribers()
+  subreddit_subscribers()
 
 if __name__ == '__main__':
   main()

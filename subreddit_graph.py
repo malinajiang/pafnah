@@ -10,15 +10,15 @@ def read_dataset(path):
   dataset = json.loads(content)
   return dataset
 
-def subreddit_suscribers():
-  suscribers_file = open('subreddit_suscribers.txt', 'r')
-  suscribers = pickle.load(suscribers_file)
-  suscribers_file.close()
+def subreddit_subscribers():
+  subscribers_file = open('subreddit_subscribers.txt', 'r')
+  subscribers = pickle.load(subscribers_file)
+  subscribers_file.close()
 
-  return suscribers
+  return subscribers
 
-def popular_subreddits(subreddits, suscribers, top_n):
-  popular = sorted(subreddits, key = lambda k: len(subreddits[k]) / float(suscribers[k]), reverse = True)
+def popular_subreddits(subreddits, subscribers, top_n):
+  popular = sorted(subreddits, key = lambda k: len(subreddits[k]) / float(subscribers[k]), reverse = True)
   return popular[:top_n]
 
 def gen_requester_unweighted(dataset):
@@ -38,12 +38,12 @@ def gen_requester_unweighted(dataset):
   return requesters, subreddits_unweighted
 
 def main(dataset):
-  suscribers = subreddit_suscribers()
+  subscribers = subreddit_subscribers()
   requesters, subreddits_unweighted = gen_requester_unweighted(dataset)
-  subreddits_unweighted = {k:v for k, v in subreddits_unweighted.items() if k in suscribers and suscribers[k] > 0}
-  popular = popular_subreddits(subreddits_unweighted, suscribers, 10)
+  subreddits_unweighted = {k:v for k, v in subreddits_unweighted.items() if k in subscribers and subscribers[k] > 0}
+  popular = popular_subreddits(subreddits_unweighted, subscribers, 10)
 
-  print [(s, len(subreddits_unweighted[s]), len(subreddits_unweighted[s]) / float(suscribers[s])) for s in popular]
+  print [(s, len(subreddits_unweighted[s]), len(subreddits_unweighted[s]) / float(subscribers[s])) for s in popular]
 
 if __name__ == '__main__':
   path = './pizza_request_dataset/pizza_request_dataset.json'
