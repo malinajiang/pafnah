@@ -10,6 +10,9 @@ def read_dataset(path):
   return dataset
 
 def get_requesters_givers(dataset):
+  received_pizza = 0
+  giver_identified = 0
+
   requesters = set()
   givers = set()
 
@@ -17,6 +20,11 @@ def get_requesters_givers(dataset):
     request = dataset[i]
     requester = request['requester_username']
     giver = request['giver_username_if_known']
+
+    if request['requester_received_pizza']:
+      received_pizza += 1
+      if giver != 'N/A':
+        giver_identified += 1
 
     requesters.add(requester)
     if giver != 'N/A':
@@ -29,6 +37,9 @@ def get_requesters_givers(dataset):
   givers_file = open('pizza_givers.txt', 'wb')
   pickle.dump(givers, givers_file)
   givers_file.close()
+
+  print 'Number of successful requests: %d' % received_pizza
+  print 'Number of identifiable givers: %d' % giver_identified
 
 def main():
   path = './pizza_request_dataset/pizza_request_dataset.json'
