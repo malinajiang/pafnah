@@ -27,7 +27,8 @@ def get_givers():
   return givers
 
 def subreddit_comments(files, requesters, givers):
-  user_comments = collections.defaultdict(lambda: collections.defaultdict(lambda: 0))
+  requester_comments = collections.defaultdict(lambda: collections.defaultdict(lambda: 0))
+  giver_comments = collections.defaultdict(lambda: collections.defaultdict(lambda: 0))
   subreddit_comments = collections.defaultdict(lambda: 0)
 
   for data_file in files:
@@ -44,15 +45,20 @@ def subreddit_comments(files, requesters, givers):
         timestamp = info[1]
         author = info[2]
  
-        if author not in requesters and author not in givers:
-          pass
+        if author in requesters:
+          requester_comments[author][subreddit] += 1
+          subreddit_comments[subreddit] += 1
+        elif author in givers:
+          giver_comments[author][subreddit] += 1
+          subreddit_comments[subreddit] += 1
 
-        user_comments[author][subreddit] += 1
-        subreddit_comments[subreddit] += 1
+  requester_comments_file = open('requester_comments.txt', 'wb')
+  dill.dump(requester_comments, requester_comments_file)
+  requester_comments_file.close()
 
-  user_comments_file = open('user_comments.txt', 'wb')
-  dill.dump(user_comments, user_comments_file)
-  user_comments_file.close()
+  giver_comments_file = open('giver_comments.txt', 'wb')
+  dill.dump(giver_comments, giver_comments_file)
+  giver_comments_file.close()
 
   subreddit_comments_file = open('subreddit_comments.txt', 'wb')
   dill.dump(subreddit_comments, subreddit_comments_file)
