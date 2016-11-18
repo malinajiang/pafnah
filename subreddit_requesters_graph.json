@@ -1,0 +1,5352 @@
+{
+    "nodes": [
+        {
+            "group": 3, 
+            "id": "relationships"
+        }, 
+        {
+            "group": 3, 
+            "id": "movies"
+        }, 
+        {
+            "group": 3, 
+            "id": "sanantonio"
+        }, 
+        {
+            "group": 3, 
+            "id": "gaming"
+        }, 
+        {
+            "group": 3, 
+            "id": "CFB"
+        }, 
+        {
+            "group": 3, 
+            "id": "GlobalOffensive"
+        }, 
+        {
+            "group": 3, 
+            "id": "dayz"
+        }, 
+        {
+            "group": 3, 
+            "id": "dogecoin"
+        }, 
+        {
+            "group": 3, 
+            "id": "TheLastAirbender"
+        }, 
+        {
+            "group": 3, 
+            "id": "newzealand"
+        }, 
+        {
+            "group": 3, 
+            "id": "RotMG"
+        }, 
+        {
+            "group": 3, 
+            "id": "changemyview"
+        }, 
+        {
+            "group": 3, 
+            "id": "Android"
+        }, 
+        {
+            "group": 3, 
+            "id": "PS4"
+        }, 
+        {
+            "group": 3, 
+            "id": "pcmasterrace"
+        }, 
+        {
+            "group": 3, 
+            "id": "magicTCG"
+        }, 
+        {
+            "group": 3, 
+            "id": "casualiama"
+        }, 
+        {
+            "group": 3, 
+            "id": "nottheonion"
+        }, 
+        {
+            "group": 3, 
+            "id": "news"
+        }, 
+        {
+            "group": 3, 
+            "id": "fatlogic"
+        }, 
+        {
+            "group": 3, 
+            "id": "DotA2"
+        }, 
+        {
+            "group": 3, 
+            "id": "Bitcoin"
+        }, 
+        {
+            "group": 3, 
+            "id": "woahdude"
+        }, 
+        {
+            "group": 3, 
+            "id": "gifs"
+        }, 
+        {
+            "group": 3, 
+            "id": "Random_Acts_Of_Pizza"
+        }, 
+        {
+            "group": 3, 
+            "id": "Frugal"
+        }, 
+        {
+            "group": 3, 
+            "id": "anime"
+        }, 
+        {
+            "group": 3, 
+            "id": "techsupport"
+        }, 
+        {
+            "group": 3, 
+            "id": "RandomActsofMakeup"
+        }, 
+        {
+            "group": 3, 
+            "id": "worldnews"
+        }, 
+        {
+            "group": 3, 
+            "id": "OkCupid"
+        }, 
+        {
+            "group": 3, 
+            "id": "Eve"
+        }, 
+        {
+            "group": 3, 
+            "id": "JusticePorn"
+        }, 
+        {
+            "group": 3, 
+            "id": "AdviceAnimals"
+        }, 
+        {
+            "group": 3, 
+            "id": "mildlyinteresting"
+        }, 
+        {
+            "group": 3, 
+            "id": "ACTrade"
+        }, 
+        {
+            "group": 3, 
+            "id": "malefashionadvice"
+        }, 
+        {
+            "group": 3, 
+            "id": "pokemon"
+        }, 
+        {
+            "group": 3, 
+            "id": "explainlikeimfive"
+        }, 
+        {
+            "group": 3, 
+            "id": "television"
+        }, 
+        {
+            "group": 3, 
+            "id": "MLS"
+        }, 
+        {
+            "group": 3, 
+            "id": "whowouldwin"
+        }, 
+        {
+            "group": 3, 
+            "id": "hockey"
+        }, 
+        {
+            "group": 3, 
+            "id": "Denmark"
+        }, 
+        {
+            "group": 3, 
+            "id": "AskWomen"
+        }, 
+        {
+            "group": 3, 
+            "id": "reactiongifs"
+        }, 
+        {
+            "group": 3, 
+            "id": "RandomActsOfPizza"
+        }, 
+        {
+            "group": 3, 
+            "id": "MakeupAddiction"
+        }, 
+        {
+            "group": 3, 
+            "id": "sex"
+        }, 
+        {
+            "group": 3, 
+            "id": "technology"
+        }, 
+        {
+            "group": 3, 
+            "id": "AskReddit"
+        }, 
+        {
+            "group": 3, 
+            "id": "gameofthrones"
+        }, 
+        {
+            "group": 3, 
+            "id": "TrollXChromosomes"
+        }, 
+        {
+            "group": 3, 
+            "id": "DnD"
+        }, 
+        {
+            "group": 3, 
+            "id": "videos"
+        }, 
+        {
+            "group": 3, 
+            "id": "politics"
+        }, 
+        {
+            "group": 3, 
+            "id": "bicycling"
+        }, 
+        {
+            "group": 3, 
+            "id": "nba"
+        }, 
+        {
+            "group": 3, 
+            "id": "fantasyfootball"
+        }, 
+        {
+            "group": 3, 
+            "id": "guns"
+        }, 
+        {
+            "group": 3, 
+            "id": "legaladvice"
+        }, 
+        {
+            "group": 3, 
+            "id": "pics"
+        }, 
+        {
+            "group": 3, 
+            "id": "todayilearned"
+        }, 
+        {
+            "group": 3, 
+            "id": "soccer"
+        }, 
+        {
+            "group": 3, 
+            "id": "TwoXChromosomes"
+        }, 
+        {
+            "group": 3, 
+            "id": "leagueoflegends"
+        }, 
+        {
+            "group": 3, 
+            "id": "DarkSouls2"
+        }, 
+        {
+            "group": 3, 
+            "id": "sydney"
+        }, 
+        {
+            "group": 3, 
+            "id": "tf2"
+        }, 
+        {
+            "group": 3, 
+            "id": "dogemarket"
+        }, 
+        {
+            "group": 3, 
+            "id": "self"
+        }, 
+        {
+            "group": 3, 
+            "id": "IAmA"
+        }, 
+        {
+            "group": 3, 
+            "id": "Wishlist"
+        }, 
+        {
+            "group": 3, 
+            "id": "TumblrInAction"
+        }, 
+        {
+            "group": 3, 
+            "id": "trees"
+        }, 
+        {
+            "group": 3, 
+            "id": "rupaulsdragrace"
+        }, 
+        {
+            "group": 3, 
+            "id": "motorcycles"
+        }, 
+        {
+            "group": 3, 
+            "id": "cringe"
+        }, 
+        {
+            "group": 3, 
+            "id": "NASCAR"
+        }, 
+        {
+            "group": 3, 
+            "id": "drunk"
+        }, 
+        {
+            "group": 3, 
+            "id": "funny"
+        }, 
+        {
+            "group": 3, 
+            "id": "tifu"
+        }, 
+        {
+            "group": 3, 
+            "id": "SquaredCircle"
+        }, 
+        {
+            "group": 3, 
+            "id": "Austin"
+        }, 
+        {
+            "group": 3, 
+            "id": "Random_Acts_Of_Amazon"
+        }, 
+        {
+            "group": 3, 
+            "id": "Seattle"
+        }, 
+        {
+            "group": 3, 
+            "id": "redditgetsdrawn"
+        }, 
+        {
+            "group": 3, 
+            "id": "Assistance"
+        }, 
+        {
+            "group": 3, 
+            "id": "Firearms"
+        }, 
+        {
+            "group": 3, 
+            "id": "opiates"
+        }, 
+        {
+            "group": 3, 
+            "id": "LifeProTips"
+        }, 
+        {
+            "group": 3, 
+            "id": "asoiaf"
+        }, 
+        {
+            "group": 3, 
+            "id": "AskMen"
+        }, 
+        {
+            "group": 3, 
+            "id": "SantasLittleHelpers"
+        }, 
+        {
+            "group": 3, 
+            "id": "electronic_cigarette"
+        }, 
+        {
+            "group": 3, 
+            "id": "BabyBumps"
+        }, 
+        {
+            "group": 3, 
+            "id": "gaybros"
+        }, 
+        {
+            "group": 3, 
+            "id": "nfl"
+        }, 
+        {
+            "group": 3, 
+            "id": "progun"
+        }, 
+        {
+            "group": 3, 
+            "id": "books"
+        }, 
+        {
+            "group": 3, 
+            "id": "aww"
+        }, 
+        {
+            "group": 3, 
+            "id": "Games"
+        }, 
+        {
+            "group": 3, 
+            "id": "hearthstone"
+        }, 
+        {
+            "group": 3, 
+            "id": "secretsanta"
+        }, 
+        {
+            "group": 3, 
+            "id": "wow"
+        }, 
+        {
+            "group": 3, 
+            "id": "smashbros"
+        }, 
+        {
+            "group": 3, 
+            "id": "Fitness"
+        }, 
+        {
+            "group": 3, 
+            "id": "Justrolledintotheshop"
+        }, 
+        {
+            "group": 3, 
+            "id": "CollegeBasketball"
+        }, 
+        {
+            "group": 3, 
+            "id": "keto"
+        }, 
+        {
+            "group": 3, 
+            "id": "buildapc"
+        }, 
+        {
+            "group": 3, 
+            "id": "Music"
+        }, 
+        {
+            "group": 3, 
+            "id": "rpg"
+        }, 
+        {
+            "group": 3, 
+            "id": "kings"
+        }, 
+        {
+            "group": 3, 
+            "id": "WTF"
+        }, 
+        {
+            "group": 3, 
+            "id": "TagPro"
+        }, 
+        {
+            "group": 3, 
+            "id": "cringepics"
+        }, 
+        {
+            "group": 3, 
+            "id": "4chan"
+        }, 
+        {
+            "group": 3, 
+            "id": "xboxone"
+        }, 
+        {
+            "group": 3, 
+            "id": "SubredditDrama"
+        }, 
+        {
+            "group": 3, 
+            "id": "hiphopheads"
+        }, 
+        {
+            "group": 3, 
+            "id": "Civcraft"
+        }, 
+        {
+            "group": 3, 
+            "id": "DestinyTheGame"
+        }, 
+        {
+            "group": 3, 
+            "id": "atheism"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cfkid94"
+        }, 
+        {
+            "group": 4, 
+            "id": "Sinderelly"
+        }, 
+        {
+            "group": 4, 
+            "id": "hijynx427"
+        }, 
+        {
+            "group": 4, 
+            "id": "that_is_so_awesome"
+        }, 
+        {
+            "group": 4, 
+            "id": "lawyerman13"
+        }, 
+        {
+            "group": 4, 
+            "id": "smellybird"
+        }, 
+        {
+            "group": 4, 
+            "id": "jamison88"
+        }, 
+        {
+            "group": 4, 
+            "id": "captainguinness"
+        }, 
+        {
+            "group": 4, 
+            "id": "gambola"
+        }, 
+        {
+            "group": 4, 
+            "id": "oops_crash"
+        }, 
+        {
+            "group": 4, 
+            "id": "pzero"
+        }, 
+        {
+            "group": 4, 
+            "id": "noperfectplace"
+        }, 
+        {
+            "group": 4, 
+            "id": "TehCourtJester"
+        }, 
+        {
+            "group": 4, 
+            "id": "SEX_LIES_AUDIOTAPE"
+        }, 
+        {
+            "group": 4, 
+            "id": "losermedia"
+        }, 
+        {
+            "group": 4, 
+            "id": "wildcatz311"
+        }, 
+        {
+            "group": 4, 
+            "id": "Shiaar"
+        }, 
+        {
+            "group": 4, 
+            "id": "winfred"
+        }, 
+        {
+            "group": 4, 
+            "id": "Fro_Daddy"
+        }, 
+        {
+            "group": 4, 
+            "id": "mercrae"
+        }, 
+        {
+            "group": 4, 
+            "id": "joshoutloud"
+        }, 
+        {
+            "group": 4, 
+            "id": "this-is-my-design"
+        }, 
+        {
+            "group": 4, 
+            "id": "Ppflounder"
+        }, 
+        {
+            "group": 4, 
+            "id": "hoganloaf"
+        }, 
+        {
+            "group": 4, 
+            "id": "kess0078"
+        }, 
+        {
+            "group": 4, 
+            "id": "purplebootyfox"
+        }, 
+        {
+            "group": 4, 
+            "id": "LessThanLaura"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mamayoda"
+        }, 
+        {
+            "group": 4, 
+            "id": "outlawadidas"
+        }, 
+        {
+            "group": 4, 
+            "id": "whoresmack"
+        }, 
+        {
+            "group": 4, 
+            "id": "ihavesomethings"
+        }, 
+        {
+            "group": 4, 
+            "id": "mrshll"
+        }, 
+        {
+            "group": 4, 
+            "id": "Zileto"
+        }, 
+        {
+            "group": 4, 
+            "id": "__C3__"
+        }, 
+        {
+            "group": 4, 
+            "id": "Xeropoint"
+        }, 
+        {
+            "group": 4, 
+            "id": "stokesthekid"
+        }, 
+        {
+            "group": 4, 
+            "id": "DPT2014"
+        }, 
+        {
+            "group": 4, 
+            "id": "gothlips"
+        }, 
+        {
+            "group": 4, 
+            "id": "unfinator"
+        }, 
+        {
+            "group": 4, 
+            "id": "activitus"
+        }, 
+        {
+            "group": 4, 
+            "id": "erikpotter82"
+        }, 
+        {
+            "group": 4, 
+            "id": "dysonlogos"
+        }, 
+        {
+            "group": 4, 
+            "id": "austocans"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheSundanceKid45"
+        }, 
+        {
+            "group": 4, 
+            "id": "SoToAnTrAx"
+        }, 
+        {
+            "group": 4, 
+            "id": "nesquiksand"
+        }, 
+        {
+            "group": 4, 
+            "id": "Tbolt2"
+        }, 
+        {
+            "group": 4, 
+            "id": "nicholsml"
+        }, 
+        {
+            "group": 4, 
+            "id": "Ultimetalhead"
+        }, 
+        {
+            "group": 4, 
+            "id": "MathIsDelicious"
+        }, 
+        {
+            "group": 4, 
+            "id": "GetDisowned"
+        }, 
+        {
+            "group": 4, 
+            "id": "djmevans"
+        }, 
+        {
+            "group": 4, 
+            "id": "watchitfall"
+        }, 
+        {
+            "group": 4, 
+            "id": "monsterunderthebed"
+        }, 
+        {
+            "group": 4, 
+            "id": "ubertuba"
+        }, 
+        {
+            "group": 4, 
+            "id": "the_hedgemon"
+        }, 
+        {
+            "group": 4, 
+            "id": "laceyisreallyrad"
+        }, 
+        {
+            "group": 4, 
+            "id": "bluehazed"
+        }, 
+        {
+            "group": 4, 
+            "id": "SneakyTikiz"
+        }, 
+        {
+            "group": 4, 
+            "id": "mediocrist"
+        }, 
+        {
+            "group": 4, 
+            "id": "textish"
+        }, 
+        {
+            "group": 4, 
+            "id": "-idk"
+        }, 
+        {
+            "group": 4, 
+            "id": "iguessimnic"
+        }, 
+        {
+            "group": 4, 
+            "id": "campbellseh"
+        }, 
+        {
+            "group": 4, 
+            "id": "omegawoot"
+        }, 
+        {
+            "group": 4, 
+            "id": "Bensteez"
+        }, 
+        {
+            "group": 4, 
+            "id": "opinjonated"
+        }, 
+        {
+            "group": 4, 
+            "id": "b0unc37x"
+        }, 
+        {
+            "group": 4, 
+            "id": "_silentheartsong"
+        }, 
+        {
+            "group": 4, 
+            "id": "jojo913"
+        }, 
+        {
+            "group": 4, 
+            "id": "rectumranger"
+        }, 
+        {
+            "group": 4, 
+            "id": "muffunz13"
+        }, 
+        {
+            "group": 4, 
+            "id": "Kyosama66"
+        }, 
+        {
+            "group": 4, 
+            "id": "Pudd1nPants"
+        }, 
+        {
+            "group": 4, 
+            "id": "Clocktease"
+        }, 
+        {
+            "group": 4, 
+            "id": "Shrumples1997"
+        }, 
+        {
+            "group": 4, 
+            "id": "EmeraldSupernova"
+        }, 
+        {
+            "group": 4, 
+            "id": "Exposuree"
+        }, 
+        {
+            "group": 4, 
+            "id": "Jx22"
+        }, 
+        {
+            "group": 4, 
+            "id": "theanimator88"
+        }, 
+        {
+            "group": 4, 
+            "id": "monolisa"
+        }, 
+        {
+            "group": 4, 
+            "id": "ReneeB"
+        }, 
+        {
+            "group": 4, 
+            "id": "cubiczoeconia"
+        }, 
+        {
+            "group": 4, 
+            "id": "chinesemike420"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheCrimsonArmada"
+        }, 
+        {
+            "group": 4, 
+            "id": "Tekken2"
+        }, 
+        {
+            "group": 4, 
+            "id": "westpfelia"
+        }, 
+        {
+            "group": 4, 
+            "id": "mmc21"
+        }, 
+        {
+            "group": 4, 
+            "id": "suckyswimmer"
+        }, 
+        {
+            "group": 4, 
+            "id": "bananandrea"
+        }, 
+        {
+            "group": 4, 
+            "id": "what_the_heil"
+        }, 
+        {
+            "group": 4, 
+            "id": "Soldi3r"
+        }, 
+        {
+            "group": 4, 
+            "id": "mo578135"
+        }, 
+        {
+            "group": 4, 
+            "id": "hexwise"
+        }, 
+        {
+            "group": 4, 
+            "id": "A5M"
+        }, 
+        {
+            "group": 4, 
+            "id": "give_this_one_a_go"
+        }, 
+        {
+            "group": 4, 
+            "id": "keyblade321"
+        }, 
+        {
+            "group": 4, 
+            "id": "deere"
+        }, 
+        {
+            "group": 4, 
+            "id": "KindOfWatchingYou"
+        }, 
+        {
+            "group": 4, 
+            "id": "POSMStudios"
+        }, 
+        {
+            "group": 4, 
+            "id": "Flanney"
+        }, 
+        {
+            "group": 4, 
+            "id": "llanox"
+        }, 
+        {
+            "group": 4, 
+            "id": "kiwiness"
+        }, 
+        {
+            "group": 4, 
+            "id": "MadWhiteMan"
+        }, 
+        {
+            "group": 4, 
+            "id": "BernieNator"
+        }, 
+        {
+            "group": 4, 
+            "id": "MattOnADinosaur"
+        }, 
+        {
+            "group": 4, 
+            "id": "stevenflerl"
+        }, 
+        {
+            "group": 4, 
+            "id": "thenikmarr"
+        }, 
+        {
+            "group": 4, 
+            "id": "annelysa"
+        }, 
+        {
+            "group": 4, 
+            "id": "ChilliPowderMeth"
+        }, 
+        {
+            "group": 4, 
+            "id": "jenntotheferr"
+        }, 
+        {
+            "group": 4, 
+            "id": "doctorelliot"
+        }, 
+        {
+            "group": 4, 
+            "id": "NotAtAllBenny"
+        }, 
+        {
+            "group": 4, 
+            "id": "kamajo8991"
+        }, 
+        {
+            "group": 4, 
+            "id": "LoneKharnivore"
+        }, 
+        {
+            "group": 4, 
+            "id": "SisterRayVU"
+        }, 
+        {
+            "group": 4, 
+            "id": "quinncuatro"
+        }, 
+        {
+            "group": 4, 
+            "id": "OreoOrigins"
+        }, 
+        {
+            "group": 4, 
+            "id": "hiyaninja"
+        }, 
+        {
+            "group": 4, 
+            "id": "redditchulous"
+        }, 
+        {
+            "group": 4, 
+            "id": "BugsBunnysCouch"
+        }, 
+        {
+            "group": 4, 
+            "id": "OzKFodrotski"
+        }, 
+        {
+            "group": 4, 
+            "id": "mandahugandkis"
+        }, 
+        {
+            "group": 4, 
+            "id": "Abiding_Lebowski"
+        }, 
+        {
+            "group": 4, 
+            "id": "cementsocks"
+        }, 
+        {
+            "group": 4, 
+            "id": "HisGreal"
+        }, 
+        {
+            "group": 4, 
+            "id": "puddems"
+        }, 
+        {
+            "group": 4, 
+            "id": "stretch_harmstrong"
+        }, 
+        {
+            "group": 4, 
+            "id": "MikoRiko"
+        }, 
+        {
+            "group": 4, 
+            "id": "iamtheriver"
+        }, 
+        {
+            "group": 4, 
+            "id": "JesusHRChrist"
+        }, 
+        {
+            "group": 4, 
+            "id": "BeerGeekAlpha"
+        }, 
+        {
+            "group": 4, 
+            "id": "getya"
+        }, 
+        {
+            "group": 4, 
+            "id": "nectarprotector"
+        }, 
+        {
+            "group": 4, 
+            "id": "tweedyourtoast"
+        }, 
+        {
+            "group": 4, 
+            "id": "Chuck_Finnley"
+        }, 
+        {
+            "group": 4, 
+            "id": "sds554"
+        }, 
+        {
+            "group": 4, 
+            "id": "opgumby"
+        }, 
+        {
+            "group": 4, 
+            "id": "Liakela"
+        }, 
+        {
+            "group": 4, 
+            "id": "robsawesum"
+        }, 
+        {
+            "group": 4, 
+            "id": "doctorcynicism"
+        }, 
+        {
+            "group": 4, 
+            "id": "StewieJr"
+        }, 
+        {
+            "group": 4, 
+            "id": "beavis81"
+        }, 
+        {
+            "group": 4, 
+            "id": "ArugulaDeathSmash"
+        }, 
+        {
+            "group": 4, 
+            "id": "dipmyballsinit"
+        }, 
+        {
+            "group": 4, 
+            "id": "cupcakessss"
+        }, 
+        {
+            "group": 4, 
+            "id": "Bronans"
+        }, 
+        {
+            "group": 4, 
+            "id": "The_Smooth_Mexican"
+        }, 
+        {
+            "group": 4, 
+            "id": "Pudie"
+        }, 
+        {
+            "group": 4, 
+            "id": "ReactorofR"
+        }, 
+        {
+            "group": 4, 
+            "id": "iProxxy"
+        }, 
+        {
+            "group": 4, 
+            "id": "Alan_The_Argonian"
+        }, 
+        {
+            "group": 4, 
+            "id": "Saeka"
+        }, 
+        {
+            "group": 4, 
+            "id": "apcolleen"
+        }, 
+        {
+            "group": 4, 
+            "id": "starlight03"
+        }, 
+        {
+            "group": 4, 
+            "id": "ricesock"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheLegionnaire"
+        }, 
+        {
+            "group": 4, 
+            "id": "replicasex"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mananers"
+        }, 
+        {
+            "group": 4, 
+            "id": "Conflux"
+        }, 
+        {
+            "group": 4, 
+            "id": "BurritoDevice"
+        }, 
+        {
+            "group": 4, 
+            "id": "KeeperEUSC"
+        }, 
+        {
+            "group": 4, 
+            "id": "swanthewarchief"
+        }, 
+        {
+            "group": 4, 
+            "id": "FadedReality"
+        }, 
+        {
+            "group": 4, 
+            "id": "bacondev"
+        }, 
+        {
+            "group": 4, 
+            "id": "GamingMaiden"
+        }, 
+        {
+            "group": 4, 
+            "id": "creativezen"
+        }, 
+        {
+            "group": 4, 
+            "id": "mazack"
+        }, 
+        {
+            "group": 4, 
+            "id": "visionaryrabbit"
+        }, 
+        {
+            "group": 4, 
+            "id": "lol2173"
+        }, 
+        {
+            "group": 4, 
+            "id": "dak0tah"
+        }, 
+        {
+            "group": 4, 
+            "id": "riptombosley"
+        }, 
+        {
+            "group": 4, 
+            "id": "kellswastaken"
+        }, 
+        {
+            "group": 4, 
+            "id": "dlenoxx"
+        }, 
+        {
+            "group": 4, 
+            "id": "autumnchibi"
+        }, 
+        {
+            "group": 4, 
+            "id": "candyapple08"
+        }, 
+        {
+            "group": 4, 
+            "id": "RUPTURED_ASSHOLE"
+        }, 
+        {
+            "group": 4, 
+            "id": "mosephk"
+        }, 
+        {
+            "group": 4, 
+            "id": "keanuisjesus"
+        }, 
+        {
+            "group": 4, 
+            "id": "Bysanity"
+        }, 
+        {
+            "group": 4, 
+            "id": "That_Urks_Me"
+        }, 
+        {
+            "group": 4, 
+            "id": "Jack_Of_All_Meds"
+        }, 
+        {
+            "group": 4, 
+            "id": "NarglesEverywhere"
+        }, 
+        {
+            "group": 4, 
+            "id": "BigBadDog"
+        }, 
+        {
+            "group": 4, 
+            "id": "strikeralley"
+        }, 
+        {
+            "group": 4, 
+            "id": "Sith_Empire"
+        }, 
+        {
+            "group": 4, 
+            "id": "carynlarsen"
+        }, 
+        {
+            "group": 4, 
+            "id": "thedirtdog"
+        }, 
+        {
+            "group": 4, 
+            "id": "dicastio"
+        }, 
+        {
+            "group": 4, 
+            "id": "goldenbear_"
+        }, 
+        {
+            "group": 4, 
+            "id": "starshyne83"
+        }, 
+        {
+            "group": 4, 
+            "id": "Veryfancydoily"
+        }, 
+        {
+            "group": 4, 
+            "id": "tethercat"
+        }, 
+        {
+            "group": 4, 
+            "id": "naymlis"
+        }, 
+        {
+            "group": 4, 
+            "id": "kyrobs"
+        }, 
+        {
+            "group": 4, 
+            "id": "Errchy"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cawstewow"
+        }, 
+        {
+            "group": 4, 
+            "id": "akagoldfish"
+        }, 
+        {
+            "group": 4, 
+            "id": "lodinick"
+        }, 
+        {
+            "group": 4, 
+            "id": "dasfeiz"
+        }, 
+        {
+            "group": 4, 
+            "id": "wuu"
+        }, 
+        {
+            "group": 4, 
+            "id": "kick_the_chort"
+        }, 
+        {
+            "group": 4, 
+            "id": "Alacar"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheUnrepententLurker"
+        }, 
+        {
+            "group": 4, 
+            "id": "tealie13"
+        }, 
+        {
+            "group": 4, 
+            "id": "Talesavo"
+        }, 
+        {
+            "group": 4, 
+            "id": "Underoathftw"
+        }, 
+        {
+            "group": 4, 
+            "id": "wickedspork"
+        }, 
+        {
+            "group": 4, 
+            "id": "PresidentGaryJohnson"
+        }, 
+        {
+            "group": 4, 
+            "id": "dboti"
+        }, 
+        {
+            "group": 4, 
+            "id": "YouCanCallMeLiz"
+        }, 
+        {
+            "group": 4, 
+            "id": "richierich925"
+        }, 
+        {
+            "group": 4, 
+            "id": "dc2040"
+        }, 
+        {
+            "group": 4, 
+            "id": "Whazzits"
+        }, 
+        {
+            "group": 4, 
+            "id": "ohsocleverhuh"
+        }, 
+        {
+            "group": 4, 
+            "id": "Flessen0"
+        }, 
+        {
+            "group": 4, 
+            "id": "8245a"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mishiiee"
+        }, 
+        {
+            "group": 4, 
+            "id": "darlantan"
+        }, 
+        {
+            "group": 4, 
+            "id": "RalphMullin"
+        }, 
+        {
+            "group": 4, 
+            "id": "Libera"
+        }, 
+        {
+            "group": 4, 
+            "id": "realbuddha"
+        }, 
+        {
+            "group": 4, 
+            "id": "RosyGraymalkin"
+        }, 
+        {
+            "group": 4, 
+            "id": "moogle516"
+        }, 
+        {
+            "group": 4, 
+            "id": "BrendanDlay"
+        }, 
+        {
+            "group": 4, 
+            "id": "watchtowerwolf"
+        }, 
+        {
+            "group": 4, 
+            "id": "MichaelFay"
+        }, 
+        {
+            "group": 4, 
+            "id": "waldotherogue"
+        }, 
+        {
+            "group": 4, 
+            "id": "jestert26"
+        }, 
+        {
+            "group": 4, 
+            "id": "SLNapster"
+        }, 
+        {
+            "group": 4, 
+            "id": "Krissp"
+        }, 
+        {
+            "group": 4, 
+            "id": "efflixi"
+        }, 
+        {
+            "group": 4, 
+            "id": "mtrumantigeru"
+        }, 
+        {
+            "group": 4, 
+            "id": "KingCarnivore"
+        }, 
+        {
+            "group": 4, 
+            "id": "tOki_Sori"
+        }, 
+        {
+            "group": 4, 
+            "id": "mikesam37"
+        }, 
+        {
+            "group": 4, 
+            "id": "TwoHeadedPanthr"
+        }, 
+        {
+            "group": 4, 
+            "id": "akmlr"
+        }, 
+        {
+            "group": 4, 
+            "id": "rkinghrsppl"
+        }, 
+        {
+            "group": 4, 
+            "id": "Doubleup"
+        }, 
+        {
+            "group": 4, 
+            "id": "Lt_Shniz"
+        }, 
+        {
+            "group": 4, 
+            "id": "Pwncho"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mikkee"
+        }, 
+        {
+            "group": 4, 
+            "id": "PhysicsGirl"
+        }, 
+        {
+            "group": 4, 
+            "id": "Einarth"
+        }, 
+        {
+            "group": 4, 
+            "id": "BmxerBarbra"
+        }, 
+        {
+            "group": 4, 
+            "id": "bad_cab"
+        }, 
+        {
+            "group": 4, 
+            "id": "foreveraskeptic"
+        }, 
+        {
+            "group": 4, 
+            "id": "Hobbez"
+        }, 
+        {
+            "group": 4, 
+            "id": "marco8_goal"
+        }, 
+        {
+            "group": 4, 
+            "id": "junior92"
+        }, 
+        {
+            "group": 4, 
+            "id": "XplatinumXpixeyX"
+        }, 
+        {
+            "group": 4, 
+            "id": "sociallyantisocial"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheGooglePlex"
+        }, 
+        {
+            "group": 4, 
+            "id": "spineapples"
+        }, 
+        {
+            "group": 4, 
+            "id": "trickedoutdavid"
+        }, 
+        {
+            "group": 4, 
+            "id": "Te5ter"
+        }, 
+        {
+            "group": 4, 
+            "id": "RobNoxious"
+        }, 
+        {
+            "group": 4, 
+            "id": "anotherred"
+        }, 
+        {
+            "group": 4, 
+            "id": "id_kai"
+        }, 
+        {
+            "group": 4, 
+            "id": "th3cavalry"
+        }, 
+        {
+            "group": 4, 
+            "id": "rushfan801"
+        }, 
+        {
+            "group": 4, 
+            "id": "MaoThatHurt"
+        }, 
+        {
+            "group": 4, 
+            "id": "bactchan"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheDreadGazeebo"
+        }, 
+        {
+            "group": 4, 
+            "id": "threwahway"
+        }, 
+        {
+            "group": 4, 
+            "id": "Drshibby"
+        }, 
+        {
+            "group": 4, 
+            "id": "Graywolves"
+        }, 
+        {
+            "group": 4, 
+            "id": "ansonr"
+        }, 
+        {
+            "group": 4, 
+            "id": "Getintothegame"
+        }, 
+        {
+            "group": 4, 
+            "id": "RainbowStar"
+        }, 
+        {
+            "group": 4, 
+            "id": "taterpot"
+        }, 
+        {
+            "group": 4, 
+            "id": "sandmyth"
+        }, 
+        {
+            "group": 4, 
+            "id": "Toliver182"
+        }, 
+        {
+            "group": 4, 
+            "id": "MushroomLizard"
+        }, 
+        {
+            "group": 4, 
+            "id": "revant54"
+        }, 
+        {
+            "group": 4, 
+            "id": "woyervunit"
+        }, 
+        {
+            "group": 4, 
+            "id": "Aaron215"
+        }, 
+        {
+            "group": 4, 
+            "id": "rozap"
+        }, 
+        {
+            "group": 4, 
+            "id": "beanieb"
+        }, 
+        {
+            "group": 4, 
+            "id": "darkangelle"
+        }, 
+        {
+            "group": 4, 
+            "id": "murraydaskull"
+        }, 
+        {
+            "group": 4, 
+            "id": "LotoSage"
+        }, 
+        {
+            "group": 4, 
+            "id": "HigglyBumps"
+        }, 
+        {
+            "group": 4, 
+            "id": "yawnlikeyoumeanit"
+        }, 
+        {
+            "group": 4, 
+            "id": "Aragog"
+        }, 
+        {
+            "group": 4, 
+            "id": "AgentCodySpanks"
+        }, 
+        {
+            "group": 4, 
+            "id": "GrimDeceiver"
+        }, 
+        {
+            "group": 4, 
+            "id": "entwithapenis"
+        }, 
+        {
+            "group": 4, 
+            "id": "hovding"
+        }, 
+        {
+            "group": 4, 
+            "id": "ChoCake"
+        }, 
+        {
+            "group": 4, 
+            "id": "supertigger"
+        }, 
+        {
+            "group": 4, 
+            "id": "BoSolaris"
+        }, 
+        {
+            "group": 4, 
+            "id": "sysadminwatdo"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheNarv1901"
+        }, 
+        {
+            "group": 4, 
+            "id": "ZynzynzyN"
+        }, 
+        {
+            "group": 4, 
+            "id": "Forever_Flaccid"
+        }, 
+        {
+            "group": 4, 
+            "id": "Vampiresagain"
+        }, 
+        {
+            "group": 4, 
+            "id": "NoWordToSaveThee"
+        }, 
+        {
+            "group": 4, 
+            "id": "KnittedOwl"
+        }, 
+        {
+            "group": 4, 
+            "id": "Omurchu"
+        }, 
+        {
+            "group": 4, 
+            "id": "dutchess_elm"
+        }, 
+        {
+            "group": 4, 
+            "id": "Dextrome92"
+        }, 
+        {
+            "group": 4, 
+            "id": "lukecage43"
+        }, 
+        {
+            "group": 4, 
+            "id": "Oscar_Rowsdower"
+        }, 
+        {
+            "group": 4, 
+            "id": "windowswill"
+        }, 
+        {
+            "group": 4, 
+            "id": "bluedays"
+        }, 
+        {
+            "group": 4, 
+            "id": "Pand0rah"
+        }, 
+        {
+            "group": 4, 
+            "id": "linkinwisdom"
+        }, 
+        {
+            "group": 4, 
+            "id": "intothesunbeams"
+        }, 
+        {
+            "group": 4, 
+            "id": "JaL19"
+        }, 
+        {
+            "group": 4, 
+            "id": "StarMech"
+        }, 
+        {
+            "group": 4, 
+            "id": "theclosetwriter"
+        }, 
+        {
+            "group": 4, 
+            "id": "greenskee"
+        }, 
+        {
+            "group": 4, 
+            "id": "legitttz"
+        }, 
+        {
+            "group": 4, 
+            "id": "adamantium_buster"
+        }, 
+        {
+            "group": 4, 
+            "id": "DrunkenPopTart"
+        }, 
+        {
+            "group": 4, 
+            "id": "Faaln"
+        }, 
+        {
+            "group": 4, 
+            "id": "UCBCarebear"
+        }, 
+        {
+            "group": 4, 
+            "id": "christofrawr"
+        }, 
+        {
+            "group": 4, 
+            "id": "sarawoof"
+        }, 
+        {
+            "group": 4, 
+            "id": "mynameisyoko"
+        }, 
+        {
+            "group": 4, 
+            "id": "grayshot"
+        }, 
+        {
+            "group": 4, 
+            "id": "nutri-matic"
+        }, 
+        {
+            "group": 4, 
+            "id": "kittybow"
+        }, 
+        {
+            "group": 4, 
+            "id": "Jeremy0020"
+        }, 
+        {
+            "group": 4, 
+            "id": "freakwastaken"
+        }, 
+        {
+            "group": 4, 
+            "id": "BlazedBro"
+        }, 
+        {
+            "group": 4, 
+            "id": "Sharptastic"
+        }, 
+        {
+            "group": 4, 
+            "id": "brinkofhumor"
+        }, 
+        {
+            "group": 4, 
+            "id": "ODSTAdrianFii"
+        }, 
+        {
+            "group": 4, 
+            "id": "Snipe_the_Spy"
+        }, 
+        {
+            "group": 4, 
+            "id": "iHardlyEverComment"
+        }, 
+        {
+            "group": 4, 
+            "id": "TommyTenToes"
+        }, 
+        {
+            "group": 4, 
+            "id": "rbwildcard"
+        }, 
+        {
+            "group": 4, 
+            "id": "BigDaddyLurker"
+        }, 
+        {
+            "group": 4, 
+            "id": "Apicalmeristem"
+        }, 
+        {
+            "group": 4, 
+            "id": "luckilymynameisanon"
+        }, 
+        {
+            "group": 4, 
+            "id": "hippymatt"
+        }, 
+        {
+            "group": 4, 
+            "id": "Speaker4theDead"
+        }, 
+        {
+            "group": 4, 
+            "id": "iKidCudi"
+        }, 
+        {
+            "group": 4, 
+            "id": "xoyie"
+        }, 
+        {
+            "group": 4, 
+            "id": "sgasph"
+        }, 
+        {
+            "group": 4, 
+            "id": "Ned_Starks_Foot"
+        }, 
+        {
+            "group": 4, 
+            "id": "awesoMetrical"
+        }, 
+        {
+            "group": 4, 
+            "id": "JazzClutchKick"
+        }, 
+        {
+            "group": 4, 
+            "id": "TonightsWhiteKnight"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cpbabes"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheyCallMeStone"
+        }, 
+        {
+            "group": 4, 
+            "id": "lljkotaru"
+        }, 
+        {
+            "group": 4, 
+            "id": "jaques34"
+        }, 
+        {
+            "group": 4, 
+            "id": "telepathetic_monkey"
+        }, 
+        {
+            "group": 4, 
+            "id": "poopdedoop"
+        }, 
+        {
+            "group": 4, 
+            "id": "amagzz"
+        }, 
+        {
+            "group": 4, 
+            "id": "jamisonfitz"
+        }, 
+        {
+            "group": 4, 
+            "id": "latenightartist"
+        }, 
+        {
+            "group": 4, 
+            "id": "corytr"
+        }, 
+        {
+            "group": 4, 
+            "id": "aroracle"
+        }, 
+        {
+            "group": 4, 
+            "id": "jezekiant"
+        }, 
+        {
+            "group": 4, 
+            "id": "JDBar1215"
+        }, 
+        {
+            "group": 4, 
+            "id": "sprokket"
+        }, 
+        {
+            "group": 4, 
+            "id": "jack_porter"
+        }, 
+        {
+            "group": 4, 
+            "id": "gnobytivarg"
+        }, 
+        {
+            "group": 4, 
+            "id": "racheal1991"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cawkii"
+        }, 
+        {
+            "group": 4, 
+            "id": "calculuzz"
+        }, 
+        {
+            "group": 4, 
+            "id": "nickx37"
+        }, 
+        {
+            "group": 4, 
+            "id": "LonelyOnNaxos"
+        }, 
+        {
+            "group": 4, 
+            "id": "beardykins"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mitch2025"
+        }, 
+        {
+            "group": 4, 
+            "id": "omgitsthepast"
+        }, 
+        {
+            "group": 4, 
+            "id": "extrachrispy"
+        }, 
+        {
+            "group": 4, 
+            "id": "r4v5"
+        }, 
+        {
+            "group": 4, 
+            "id": "gammarayzzz"
+        }, 
+        {
+            "group": 4, 
+            "id": "wolf_redrum"
+        }, 
+        {
+            "group": 4, 
+            "id": "c_murder"
+        }, 
+        {
+            "group": 4, 
+            "id": "Quetz23"
+        }, 
+        {
+            "group": 4, 
+            "id": "Fapotheosis"
+        }, 
+        {
+            "group": 4, 
+            "id": "DocFGeek"
+        }, 
+        {
+            "group": 4, 
+            "id": "Rastro"
+        }, 
+        {
+            "group": 4, 
+            "id": "s32"
+        }, 
+        {
+            "group": 4, 
+            "id": "xsizo"
+        }, 
+        {
+            "group": 4, 
+            "id": "RainbowDashPro"
+        }, 
+        {
+            "group": 4, 
+            "id": "Kinematic9"
+        }, 
+        {
+            "group": 4, 
+            "id": "BibleBeltAtheist"
+        }, 
+        {
+            "group": 4, 
+            "id": "iamagiraff3"
+        }, 
+        {
+            "group": 4, 
+            "id": "CamJ26"
+        }, 
+        {
+            "group": 4, 
+            "id": "swade22789"
+        }, 
+        {
+            "group": 4, 
+            "id": "Crazypenguine"
+        }, 
+        {
+            "group": 4, 
+            "id": "RockNRollahAyatollah"
+        }, 
+        {
+            "group": 4, 
+            "id": "abigaila"
+        }, 
+        {
+            "group": 4, 
+            "id": "Metal-Phoenix"
+        }, 
+        {
+            "group": 4, 
+            "id": "Karusune"
+        }, 
+        {
+            "group": 4, 
+            "id": "deusahominis"
+        }, 
+        {
+            "group": 4, 
+            "id": "secretlyalone"
+        }, 
+        {
+            "group": 4, 
+            "id": "Thayet"
+        }, 
+        {
+            "group": 4, 
+            "id": "sniperlotte"
+        }, 
+        {
+            "group": 4, 
+            "id": "abscando"
+        }, 
+        {
+            "group": 4, 
+            "id": "ph0bos"
+        }, 
+        {
+            "group": 4, 
+            "id": "wittyamber"
+        }, 
+        {
+            "group": 4, 
+            "id": "NerdWith_A_Tan"
+        }, 
+        {
+            "group": 4, 
+            "id": "WarriorIsCold"
+        }, 
+        {
+            "group": 4, 
+            "id": "ccarr77"
+        }, 
+        {
+            "group": 4, 
+            "id": "FlyYellowMoon"
+        }, 
+        {
+            "group": 4, 
+            "id": "bluecastle"
+        }, 
+        {
+            "group": 4, 
+            "id": "GloriousPaperWait"
+        }, 
+        {
+            "group": 4, 
+            "id": "thekutterback"
+        }, 
+        {
+            "group": 4, 
+            "id": "Xalwine"
+        }, 
+        {
+            "group": 4, 
+            "id": "howmanymics"
+        }, 
+        {
+            "group": 4, 
+            "id": "proFRESHional"
+        }, 
+        {
+            "group": 4, 
+            "id": "mitchellmm02"
+        }, 
+        {
+            "group": 4, 
+            "id": "ZinjaNombie"
+        }, 
+        {
+            "group": 4, 
+            "id": "shavingourbeards"
+        }, 
+        {
+            "group": 4, 
+            "id": "Erkmon"
+        }, 
+        {
+            "group": 4, 
+            "id": "sincerelymoi"
+        }, 
+        {
+            "group": 4, 
+            "id": "JoEsMhOe"
+        }, 
+        {
+            "group": 4, 
+            "id": "Entangledphoton"
+        }, 
+        {
+            "group": 4, 
+            "id": "elliottok"
+        }, 
+        {
+            "group": 4, 
+            "id": "CaliToast"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cmdr_Taw"
+        }, 
+        {
+            "group": 4, 
+            "id": "flakemusic13"
+        }, 
+        {
+            "group": 4, 
+            "id": "anointednonsense"
+        }, 
+        {
+            "group": 4, 
+            "id": "yarnto"
+        }, 
+        {
+            "group": 4, 
+            "id": "smechile"
+        }, 
+        {
+            "group": 4, 
+            "id": "GoochGewitter"
+        }, 
+        {
+            "group": 4, 
+            "id": "Bhraonain"
+        }, 
+        {
+            "group": 4, 
+            "id": "alpha523"
+        }, 
+        {
+            "group": 4, 
+            "id": "Hornstar19"
+        }, 
+        {
+            "group": 4, 
+            "id": "aaronthehuman"
+        }, 
+        {
+            "group": 4, 
+            "id": "thunderpcats"
+        }, 
+        {
+            "group": 4, 
+            "id": "nancynaturally"
+        }, 
+        {
+            "group": 4, 
+            "id": "Kerdek"
+        }, 
+        {
+            "group": 4, 
+            "id": "sterling_mallory"
+        }, 
+        {
+            "group": 4, 
+            "id": "learn2beabum"
+        }, 
+        {
+            "group": 4, 
+            "id": "OtherRobotLuke"
+        }, 
+        {
+            "group": 4, 
+            "id": "RogueNine"
+        }, 
+        {
+            "group": 4, 
+            "id": "FirmerFilly"
+        }, 
+        {
+            "group": 4, 
+            "id": "songandsilence"
+        }, 
+        {
+            "group": 4, 
+            "id": "StayFrostyIcebrgSlim"
+        }, 
+        {
+            "group": 4, 
+            "id": "poutina"
+        }, 
+        {
+            "group": 4, 
+            "id": "SRowan33"
+        }, 
+        {
+            "group": 4, 
+            "id": "radpitt"
+        }, 
+        {
+            "group": 4, 
+            "id": "strictlycomeprancing"
+        }, 
+        {
+            "group": 4, 
+            "id": "nemisis54"
+        }, 
+        {
+            "group": 4, 
+            "id": "jlking3"
+        }, 
+        {
+            "group": 4, 
+            "id": "rgundran87"
+        }, 
+        {
+            "group": 4, 
+            "id": "adamstributer"
+        }, 
+        {
+            "group": 4, 
+            "id": "illlawlatyew"
+        }, 
+        {
+            "group": 4, 
+            "id": "bucknakid14"
+        }, 
+        {
+            "group": 4, 
+            "id": "DodongoDislikesSmoke"
+        }, 
+        {
+            "group": 4, 
+            "id": "sheik790"
+        }, 
+        {
+            "group": 4, 
+            "id": "AndrewMufasaaaa"
+        }, 
+        {
+            "group": 4, 
+            "id": "undeclared1744"
+        }, 
+        {
+            "group": 4, 
+            "id": "aafter"
+        }, 
+        {
+            "group": 4, 
+            "id": "Romnix"
+        }, 
+        {
+            "group": 4, 
+            "id": "davisescapeplan"
+        }, 
+        {
+            "group": 4, 
+            "id": "oneordinarylife"
+        }, 
+        {
+            "group": 4, 
+            "id": "fletchdoll"
+        }, 
+        {
+            "group": 4, 
+            "id": "Gephoria"
+        }, 
+        {
+            "group": 4, 
+            "id": "TriggerdbyChrono"
+        }, 
+        {
+            "group": 4, 
+            "id": "sicilianhotdog"
+        }, 
+        {
+            "group": 4, 
+            "id": "schuppaloop"
+        }, 
+        {
+            "group": 4, 
+            "id": "kyak12"
+        }, 
+        {
+            "group": 4, 
+            "id": "spazmodial"
+        }, 
+        {
+            "group": 4, 
+            "id": "delyryum"
+        }, 
+        {
+            "group": 4, 
+            "id": "NorthAve"
+        }, 
+        {
+            "group": 4, 
+            "id": "digitaldraco"
+        }, 
+        {
+            "group": 4, 
+            "id": "elephantbuttons"
+        }, 
+        {
+            "group": 4, 
+            "id": "AthiestCowboy"
+        }, 
+        {
+            "group": 4, 
+            "id": "sloecks"
+        }, 
+        {
+            "group": 4, 
+            "id": "frogfreek"
+        }, 
+        {
+            "group": 4, 
+            "id": "ANAL_POPCORN"
+        }, 
+        {
+            "group": 4, 
+            "id": "DuckMasterFlexxx"
+        }, 
+        {
+            "group": 4, 
+            "id": "Madjawa"
+        }, 
+        {
+            "group": 4, 
+            "id": "MarcianTobay"
+        }, 
+        {
+            "group": 4, 
+            "id": "gomental"
+        }, 
+        {
+            "group": 4, 
+            "id": "constantgardener"
+        }, 
+        {
+            "group": 4, 
+            "id": "zedoktar"
+        }, 
+        {
+            "group": 4, 
+            "id": "mercmaid"
+        }, 
+        {
+            "group": 4, 
+            "id": "20TL12III"
+        }, 
+        {
+            "group": 4, 
+            "id": "krokounleashed"
+        }, 
+        {
+            "group": 4, 
+            "id": "jasonmm1979"
+        }, 
+        {
+            "group": 4, 
+            "id": "nevermind924"
+        }, 
+        {
+            "group": 4, 
+            "id": "VordLader"
+        }, 
+        {
+            "group": 4, 
+            "id": "NigelxD"
+        }, 
+        {
+            "group": 4, 
+            "id": "Danjanon"
+        }, 
+        {
+            "group": 4, 
+            "id": "Manning01"
+        }, 
+        {
+            "group": 4, 
+            "id": "r0ryfromNY"
+        }, 
+        {
+            "group": 4, 
+            "id": "Fhanky"
+        }, 
+        {
+            "group": 4, 
+            "id": "coranai"
+        }, 
+        {
+            "group": 4, 
+            "id": "PlazzmiK"
+        }, 
+        {
+            "group": 4, 
+            "id": "aFunnyWorldWeLiveIn"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheKidWantsMilk"
+        }, 
+        {
+            "group": 4, 
+            "id": "sheilathen"
+        }, 
+        {
+            "group": 4, 
+            "id": "unkinhead"
+        }, 
+        {
+            "group": 4, 
+            "id": "tapedeckghost"
+        }, 
+        {
+            "group": 4, 
+            "id": "pregosaurusrex"
+        }, 
+        {
+            "group": 4, 
+            "id": "DeTrueSnyder"
+        }, 
+        {
+            "group": 4, 
+            "id": "Muhnazer"
+        }, 
+        {
+            "group": 4, 
+            "id": "goldenwookieechild"
+        }, 
+        {
+            "group": 4, 
+            "id": "howgoyoufar"
+        }, 
+        {
+            "group": 4, 
+            "id": "zeezey"
+        }, 
+        {
+            "group": 4, 
+            "id": "DwightKurtShrute"
+        }, 
+        {
+            "group": 4, 
+            "id": "calabresi"
+        }, 
+        {
+            "group": 4, 
+            "id": "I_can_see_you"
+        }, 
+        {
+            "group": 4, 
+            "id": "303win"
+        }, 
+        {
+            "group": 4, 
+            "id": "raddisease"
+        }, 
+        {
+            "group": 4, 
+            "id": "jfkk"
+        }, 
+        {
+            "group": 4, 
+            "id": "MechEngineeringGod"
+        }, 
+        {
+            "group": 4, 
+            "id": "ruoka"
+        }, 
+        {
+            "group": 4, 
+            "id": "Zombiemold"
+        }, 
+        {
+            "group": 4, 
+            "id": "CPKsJimboslice"
+        }, 
+        {
+            "group": 4, 
+            "id": "Miguel2592"
+        }, 
+        {
+            "group": 4, 
+            "id": "mrslowloris"
+        }, 
+        {
+            "group": 4, 
+            "id": "roxie1127"
+        }, 
+        {
+            "group": 4, 
+            "id": "CcaseyC"
+        }, 
+        {
+            "group": 4, 
+            "id": "Turtledunkz"
+        }, 
+        {
+            "group": 4, 
+            "id": "ShrapnelShock"
+        }, 
+        {
+            "group": 4, 
+            "id": "Creamchz"
+        }, 
+        {
+            "group": 4, 
+            "id": "dangersteveover"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheRealTaryn"
+        }, 
+        {
+            "group": 4, 
+            "id": "thefatgod"
+        }, 
+        {
+            "group": 4, 
+            "id": "dlnmtt"
+        }, 
+        {
+            "group": 4, 
+            "id": "corbeeZ"
+        }, 
+        {
+            "group": 4, 
+            "id": "Tricher619"
+        }, 
+        {
+            "group": 4, 
+            "id": "Wolfeman0101"
+        }, 
+        {
+            "group": 4, 
+            "id": "donttrolljohn"
+        }, 
+        {
+            "group": 4, 
+            "id": "glycerinSOAPbox"
+        }, 
+        {
+            "group": 4, 
+            "id": "RenoodleWNDRxxx"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mysteryman64"
+        }, 
+        {
+            "group": 4, 
+            "id": "rinnanine"
+        }, 
+        {
+            "group": 4, 
+            "id": "KytyMeowFace"
+        }, 
+        {
+            "group": 4, 
+            "id": "idogiam"
+        }, 
+        {
+            "group": 4, 
+            "id": "asouthernsun"
+        }, 
+        {
+            "group": 4, 
+            "id": "Knowltey"
+        }, 
+        {
+            "group": 4, 
+            "id": "krosenest"
+        }, 
+        {
+            "group": 4, 
+            "id": "Swineavionics"
+        }, 
+        {
+            "group": 4, 
+            "id": "Twilight_Sparkles"
+        }, 
+        {
+            "group": 4, 
+            "id": "thedragslay"
+        }, 
+        {
+            "group": 4, 
+            "id": "MyKarmaKilledURDogma"
+        }, 
+        {
+            "group": 4, 
+            "id": "YoungSerious"
+        }, 
+        {
+            "group": 4, 
+            "id": "LittleRedReadingHood"
+        }, 
+        {
+            "group": 4, 
+            "id": "craigory45"
+        }, 
+        {
+            "group": 4, 
+            "id": "dmcmd81"
+        }, 
+        {
+            "group": 4, 
+            "id": "SourPatchAdult"
+        }, 
+        {
+            "group": 4, 
+            "id": "SilvioManuel"
+        }, 
+        {
+            "group": 4, 
+            "id": "Megaross"
+        }, 
+        {
+            "group": 4, 
+            "id": "pbtechie"
+        }, 
+        {
+            "group": 4, 
+            "id": "muddyh2o"
+        }, 
+        {
+            "group": 4, 
+            "id": "RattaTatTat"
+        }, 
+        {
+            "group": 4, 
+            "id": "higgles5"
+        }, 
+        {
+            "group": 4, 
+            "id": "karatedude1990"
+        }, 
+        {
+            "group": 4, 
+            "id": "fullmetalutes"
+        }, 
+        {
+            "group": 4, 
+            "id": "ohem"
+        }, 
+        {
+            "group": 4, 
+            "id": "megthegreatone"
+        }, 
+        {
+            "group": 4, 
+            "id": "yeahmaybe"
+        }, 
+        {
+            "group": 4, 
+            "id": "TrapandRelease"
+        }, 
+        {
+            "group": 4, 
+            "id": "Edapoe"
+        }, 
+        {
+            "group": 4, 
+            "id": "williamspam91"
+        }, 
+        {
+            "group": 4, 
+            "id": "AvatarMajere"
+        }, 
+        {
+            "group": 4, 
+            "id": "Sparkitten"
+        }, 
+        {
+            "group": 4, 
+            "id": "AK40Sarah"
+        }, 
+        {
+            "group": 4, 
+            "id": "Fuzzywumpkis"
+        }, 
+        {
+            "group": 4, 
+            "id": "icefall5"
+        }, 
+        {
+            "group": 4, 
+            "id": "killhimalready"
+        }, 
+        {
+            "group": 4, 
+            "id": "fattyboombaladee"
+        }, 
+        {
+            "group": 4, 
+            "id": "SomewhatMystia"
+        }, 
+        {
+            "group": 4, 
+            "id": "motob751"
+        }, 
+        {
+            "group": 4, 
+            "id": "Hamburglary"
+        }, 
+        {
+            "group": 4, 
+            "id": "wnbaloll"
+        }, 
+        {
+            "group": 4, 
+            "id": "timefornothing"
+        }, 
+        {
+            "group": 4, 
+            "id": "thursdaye"
+        }, 
+        {
+            "group": 4, 
+            "id": "javi_intheair"
+        }, 
+        {
+            "group": 4, 
+            "id": "883iron"
+        }, 
+        {
+            "group": 4, 
+            "id": "pooncartercash"
+        }, 
+        {
+            "group": 4, 
+            "id": "Jewseephish"
+        }, 
+        {
+            "group": 4, 
+            "id": "elephantblueshoe"
+        }, 
+        {
+            "group": 4, 
+            "id": "rabidsi"
+        }, 
+        {
+            "group": 4, 
+            "id": "heyyoudontsaythat"
+        }, 
+        {
+            "group": 4, 
+            "id": "the_pawl"
+        }, 
+        {
+            "group": 4, 
+            "id": "Orangeslayer"
+        }, 
+        {
+            "group": 4, 
+            "id": "Chrisand11"
+        }, 
+        {
+            "group": 4, 
+            "id": "Flippy02"
+        }, 
+        {
+            "group": 4, 
+            "id": "zombisaurusrex"
+        }, 
+        {
+            "group": 4, 
+            "id": "israel_regardie"
+        }, 
+        {
+            "group": 4, 
+            "id": "Snapdude9"
+        }, 
+        {
+            "group": 4, 
+            "id": "G1oves"
+        }, 
+        {
+            "group": 4, 
+            "id": "TallGlass"
+        }, 
+        {
+            "group": 4, 
+            "id": "Cardboardpoops"
+        }, 
+        {
+            "group": 4, 
+            "id": "nottsoathletic"
+        }, 
+        {
+            "group": 4, 
+            "id": "leena1004"
+        }, 
+        {
+            "group": 4, 
+            "id": "pwitt2"
+        }, 
+        {
+            "group": 4, 
+            "id": "avalon18"
+        }, 
+        {
+            "group": 4, 
+            "id": "Zeis"
+        }, 
+        {
+            "group": 4, 
+            "id": "Ander1ap"
+        }, 
+        {
+            "group": 4, 
+            "id": "Hintshigen"
+        }, 
+        {
+            "group": 4, 
+            "id": "shhkari"
+        }, 
+        {
+            "group": 4, 
+            "id": "hipsterhater608"
+        }, 
+        {
+            "group": 4, 
+            "id": "HelloUnderworld"
+        }, 
+        {
+            "group": 4, 
+            "id": "letroller"
+        }, 
+        {
+            "group": 4, 
+            "id": "driftsc"
+        }, 
+        {
+            "group": 4, 
+            "id": "Katzenklavier"
+        }, 
+        {
+            "group": 4, 
+            "id": "Toxicsidewinder"
+        }, 
+        {
+            "group": 4, 
+            "id": "THevil30"
+        }, 
+        {
+            "group": 4, 
+            "id": "AndrewTindall"
+        }, 
+        {
+            "group": 4, 
+            "id": "ohsammyboy"
+        }, 
+        {
+            "group": 4, 
+            "id": "SurprisinglyEdible"
+        }, 
+        {
+            "group": 4, 
+            "id": "darwin57"
+        }, 
+        {
+            "group": 4, 
+            "id": "POTEMrx"
+        }, 
+        {
+            "group": 4, 
+            "id": "frankcbright"
+        }, 
+        {
+            "group": 4, 
+            "id": "Buju3000"
+        }, 
+        {
+            "group": 4, 
+            "id": "frizzyburr"
+        }, 
+        {
+            "group": 4, 
+            "id": "Psychochan"
+        }, 
+        {
+            "group": 4, 
+            "id": "herrokatie"
+        }, 
+        {
+            "group": 4, 
+            "id": "Edgar_A_Poe"
+        }, 
+        {
+            "group": 4, 
+            "id": "pipedreamexplosion"
+        }, 
+        {
+            "group": 4, 
+            "id": "albinotron"
+        }, 
+        {
+            "group": 4, 
+            "id": "withoutamartyr"
+        }, 
+        {
+            "group": 4, 
+            "id": "DrPepperHelp"
+        }, 
+        {
+            "group": 4, 
+            "id": "ricecake23"
+        }, 
+        {
+            "group": 4, 
+            "id": "czeroes"
+        }, 
+        {
+            "group": 4, 
+            "id": "cuttingagent"
+        }, 
+        {
+            "group": 4, 
+            "id": "jedberg"
+        }, 
+        {
+            "group": 4, 
+            "id": "Phllpkrn"
+        }, 
+        {
+            "group": 4, 
+            "id": "doozerman"
+        }, 
+        {
+            "group": 4, 
+            "id": "f33dback"
+        }, 
+        {
+            "group": 4, 
+            "id": "Projectile_Muffin"
+        }, 
+        {
+            "group": 4, 
+            "id": "artvandelay916"
+        }, 
+        {
+            "group": 4, 
+            "id": "Buffatron"
+        }, 
+        {
+            "group": 4, 
+            "id": "WolfDroid"
+        }, 
+        {
+            "group": 4, 
+            "id": "Lynxx"
+        }, 
+        {
+            "group": 4, 
+            "id": "Ikouze"
+        }, 
+        {
+            "group": 4, 
+            "id": "imaguyandiwantagirl"
+        }, 
+        {
+            "group": 4, 
+            "id": "DumbDumbFace"
+        }, 
+        {
+            "group": 4, 
+            "id": "6995"
+        }, 
+        {
+            "group": 4, 
+            "id": "OpenFusili"
+        }, 
+        {
+            "group": 4, 
+            "id": "theserpentsmiles"
+        }, 
+        {
+            "group": 4, 
+            "id": "LittleMissBlue"
+        }, 
+        {
+            "group": 4, 
+            "id": "narwhall"
+        }, 
+        {
+            "group": 4, 
+            "id": "Bionic0n3"
+        }, 
+        {
+            "group": 4, 
+            "id": "Evrimnn13"
+        }, 
+        {
+            "group": 4, 
+            "id": "Xxbatman_XD"
+        }, 
+        {
+            "group": 4, 
+            "id": "course_you_do"
+        }, 
+        {
+            "group": 4, 
+            "id": "mayx"
+        }, 
+        {
+            "group": 4, 
+            "id": "MrDrPhizzle"
+        }, 
+        {
+            "group": 4, 
+            "id": "cavanaughs"
+        }, 
+        {
+            "group": 4, 
+            "id": "thewisestwise"
+        }, 
+        {
+            "group": 4, 
+            "id": "jomomasdady"
+        }, 
+        {
+            "group": 4, 
+            "id": "KeitaroCoS"
+        }, 
+        {
+            "group": 4, 
+            "id": "gjrunfast"
+        }, 
+        {
+            "group": 4, 
+            "id": "salmonerd202"
+        }, 
+        {
+            "group": 4, 
+            "id": "robmpulse"
+        }, 
+        {
+            "group": 4, 
+            "id": "LovePenguin333"
+        }, 
+        {
+            "group": 4, 
+            "id": "xAbaddon"
+        }, 
+        {
+            "group": 4, 
+            "id": "perjunk"
+        }, 
+        {
+            "group": 4, 
+            "id": "whatisthisthing"
+        }, 
+        {
+            "group": 4, 
+            "id": "Alejandrar3"
+        }, 
+        {
+            "group": 4, 
+            "id": "TheOperaCar"
+        }, 
+        {
+            "group": 4, 
+            "id": "Sir_Dalek"
+        }, 
+        {
+            "group": 4, 
+            "id": "StormRider2407"
+        }, 
+        {
+            "group": 4, 
+            "id": "Satheling"
+        }, 
+        {
+            "group": 4, 
+            "id": "xtenext"
+        }, 
+        {
+            "group": 4, 
+            "id": "SCATTRON"
+        }, 
+        {
+            "group": 4, 
+            "id": "genericgamer"
+        }, 
+        {
+            "group": 4, 
+            "id": "trixner"
+        }, 
+        {
+            "group": 4, 
+            "id": "w0mpw0mp"
+        }, 
+        {
+            "group": 4, 
+            "id": "SlipShift"
+        }, 
+        {
+            "group": 4, 
+            "id": "MarbhDamhsa"
+        }, 
+        {
+            "group": 4, 
+            "id": "FPSalchemy"
+        }, 
+        {
+            "group": 4, 
+            "id": "sniperjohn"
+        }, 
+        {
+            "group": 4, 
+            "id": "Orcasmic"
+        }, 
+        {
+            "group": 4, 
+            "id": "StopYellingAt_Me"
+        }, 
+        {
+            "group": 4, 
+            "id": "CloudDrunk"
+        }, 
+        {
+            "group": 4, 
+            "id": "The_Babe"
+        }, 
+        {
+            "group": 4, 
+            "id": "deerface"
+        }, 
+        {
+            "group": 4, 
+            "id": "oneir0naut0"
+        }, 
+        {
+            "group": 4, 
+            "id": "Elaquidor"
+        }, 
+        {
+            "group": 4, 
+            "id": "Hekain"
+        }, 
+        {
+            "group": 4, 
+            "id": "CosmoRealmer"
+        }, 
+        {
+            "group": 4, 
+            "id": "cyclosity"
+        }, 
+        {
+            "group": 4, 
+            "id": "ztfreeman"
+        }, 
+        {
+            "group": 4, 
+            "id": "I_Cry_Everytime"
+        }, 
+        {
+            "group": 4, 
+            "id": "T0bster"
+        }, 
+        {
+            "group": 4, 
+            "id": "kubarotfl"
+        }, 
+        {
+            "group": 4, 
+            "id": "DOMOxHAX"
+        }, 
+        {
+            "group": 4, 
+            "id": "DocAtDuq"
+        }, 
+        {
+            "group": 4, 
+            "id": "UkuleleNoGood"
+        }, 
+        {
+            "group": 4, 
+            "id": "jtomatzin"
+        }, 
+        {
+            "group": 4, 
+            "id": "djpedrop"
+        }, 
+        {
+            "group": 4, 
+            "id": "CappyTheCook"
+        }, 
+        {
+            "group": 4, 
+            "id": "JeannaW"
+        }, 
+        {
+            "group": 4, 
+            "id": "itsaghostagain"
+        }, 
+        {
+            "group": 4, 
+            "id": "unibody"
+        }, 
+        {
+            "group": 4, 
+            "id": "kaptainkeel"
+        }, 
+        {
+            "group": 4, 
+            "id": "ErronSeth"
+        }, 
+        {
+            "group": 4, 
+            "id": "KadenTau"
+        }, 
+        {
+            "group": 4, 
+            "id": "tejmin"
+        }, 
+        {
+            "group": 4, 
+            "id": "gnarwalbacon"
+        }, 
+        {
+            "group": 4, 
+            "id": "enderwigout"
+        }, 
+        {
+            "group": 4, 
+            "id": "Mildcorma"
+        }
+    ], 
+    "links": [
+        {
+            "source": "TehCourtJester", 
+            "target": "TrollXChromosomes", 
+            "value": 2.0718816067653276
+        }, 
+        {
+            "source": "this-is-my-design", 
+            "target": "fatlogic", 
+            "value": 8.210689388071263
+        }, 
+        {
+            "source": "this-is-my-design", 
+            "target": "keto", 
+            "value": 1.7843866171003717
+        }, 
+        {
+            "source": "this-is-my-design", 
+            "target": "TumblrInAction", 
+            "value": 2.687823834196891
+        }, 
+        {
+            "source": "kess0078", 
+            "target": "rupaulsdragrace", 
+            "value": 3.6627505183137523
+        }, 
+        {
+            "source": "mrshll", 
+            "target": "electronic_cigarette", 
+            "value": 1.2024048096192386
+        }, 
+        {
+            "source": "mrshll", 
+            "target": "techsupport", 
+            "value": 1.2668250197941409
+        }, 
+        {
+            "source": "Zileto", 
+            "target": "sex", 
+            "value": 1.0982658959537572
+        }, 
+        {
+            "source": "Xeropoint", 
+            "target": "Random_Acts_Of_Pizza", 
+            "value": 1.8927444794952681
+        }, 
+        {
+            "source": "activitus", 
+            "target": "soccer", 
+            "value": 1.3776184185695415
+        }, 
+        {
+            "source": "erikpotter82", 
+            "target": "asoiaf", 
+            "value": 16.654384672070744
+        }, 
+        {
+            "source": "dysonlogos", 
+            "target": "DnD", 
+            "value": 26.400000000000002
+        }, 
+        {
+            "source": "dysonlogos", 
+            "target": "WTF", 
+            "value": 1.315367340391402
+        }, 
+        {
+            "source": "dysonlogos", 
+            "target": "rpg", 
+            "value": 34.10237923576063
+        }, 
+        {
+            "source": "austocans", 
+            "target": "xboxone", 
+            "value": 2.3072594259988746
+        }, 
+        {
+            "source": "nicholsml", 
+            "target": "buildapc", 
+            "value": 3.446528129751647
+        }, 
+        {
+            "source": "nicholsml", 
+            "target": "books", 
+            "value": 2.2149302707136997
+        }, 
+        {
+            "source": "nicholsml", 
+            "target": "television", 
+            "value": 2.164179104477612
+        }, 
+        {
+            "source": "monsterunderthebed", 
+            "target": "wow", 
+            "value": 1.05941005400914
+        }, 
+        {
+            "source": "the_hedgemon", 
+            "target": "techsupport", 
+            "value": 1.187648456057007
+        }, 
+        {
+            "source": "-idk", 
+            "target": "trees", 
+            "value": 1.100594320933304
+        }, 
+        {
+            "source": "iguessimnic", 
+            "target": "dayz", 
+            "value": 4.342921601804851
+        }, 
+        {
+            "source": "omegawoot", 
+            "target": "AskReddit", 
+            "value": 1.0036639917279206
+        }, 
+        {
+            "source": "omegawoot", 
+            "target": "leagueoflegends", 
+            "value": 2.9770129380731065
+        }, 
+        {
+            "source": "opinjonated", 
+            "target": "DestinyTheGame", 
+            "value": 2.357479639948564
+        }, 
+        {
+            "source": "opinjonated", 
+            "target": "Android", 
+            "value": 1.1774967291757523
+        }, 
+        {
+            "source": "opinjonated", 
+            "target": "PS4", 
+            "value": 3.677758318739054
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "relationships", 
+            "value": 5.607476635514018
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "sex", 
+            "value": 1.0404624277456647
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "books", 
+            "value": 1.2305168170631664
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "TwoXChromosomes", 
+            "value": 5.619596541786744
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "legaladvice", 
+            "value": 20.20066889632107
+        }, 
+        {
+            "source": "_silentheartsong", 
+            "target": "self", 
+            "value": 5.3156146179401995
+        }, 
+        {
+            "source": "jojo913", 
+            "target": "drunk", 
+            "value": 19.26530612244898
+        }, 
+        {
+            "source": "Kyosama66", 
+            "target": "drunk", 
+            "value": 1.4693877551020407
+        }, 
+        {
+            "source": "Shrumples1997", 
+            "target": "DarkSouls2", 
+            "value": 1.6090104585679808
+        }, 
+        {
+            "source": "ReneeB", 
+            "target": "AskWomen", 
+            "value": 1.1779554059739168
+        }, 
+        {
+            "source": "cubiczoeconia", 
+            "target": "MakeupAddiction", 
+            "value": 1.2801204819277108
+        }, 
+        {
+            "source": "what_the_heil", 
+            "target": "TrollXChromosomes", 
+            "value": 1.0570824524312896
+        }, 
+        {
+            "source": "what_the_heil", 
+            "target": "Random_Acts_Of_Amazon", 
+            "value": 2.0836092349799147
+        }, 
+        {
+            "source": "deere", 
+            "target": "opiates", 
+            "value": 2.514919011082694
+        }, 
+        {
+            "source": "POSMStudios", 
+            "target": "leagueoflegends", 
+            "value": 1.5450320311518653
+        }, 
+        {
+            "source": "Flanney", 
+            "target": "Seattle", 
+            "value": 1.5128593040847202
+        }, 
+        {
+            "source": "BernieNator", 
+            "target": "Eve", 
+            "value": 12.395437262357415
+        }, 
+        {
+            "source": "BernieNator", 
+            "target": "TumblrInAction", 
+            "value": 2.687823834196891
+        }, 
+        {
+            "source": "ChilliPowderMeth", 
+            "target": "fantasyfootball", 
+            "value": 1.4373170082512643
+        }, 
+        {
+            "source": "doctorelliot", 
+            "target": "TwoXChromosomes", 
+            "value": 1.1047070124879923
+        }, 
+        {
+            "source": "doctorelliot", 
+            "target": "casualiama", 
+            "value": 1.2399708242159009
+        }, 
+        {
+            "source": "LoneKharnivore", 
+            "target": "rpg", 
+            "value": 6.560922855082913
+        }, 
+        {
+            "source": "LoneKharnivore", 
+            "target": "DnD", 
+            "value": 24.4
+        }, 
+        {
+            "source": "LoneKharnivore", 
+            "target": "movies", 
+            "value": 4.810644831115661
+        }, 
+        {
+            "source": "LoneKharnivore", 
+            "target": "nottheonion", 
+            "value": 5.221414408460013
+        }, 
+        {
+            "source": "SisterRayVU", 
+            "target": "relationships", 
+            "value": 6.425233644859812
+        }, 
+        {
+            "source": "SisterRayVU", 
+            "target": "malefashionadvice", 
+            "value": 10.461880912632164
+        }, 
+        {
+            "source": "SisterRayVU", 
+            "target": "Music", 
+            "value": 2.1216973578863088
+        }, 
+        {
+            "source": "SisterRayVU", 
+            "target": "explainlikeimfive", 
+            "value": 1.0085917071348525
+        }, 
+        {
+            "source": "SisterRayVU", 
+            "target": "IAmA", 
+            "value": 1.882597094574563
+        }, 
+        {
+            "source": "quinncuatro", 
+            "target": "malefashionadvice", 
+            "value": 1.335559265442404
+        }, 
+        {
+            "source": "quinncuatro", 
+            "target": "IAmA", 
+            "value": 1.5861251111769936
+        }, 
+        {
+            "source": "JesusHRChrist", 
+            "target": "SquaredCircle", 
+            "value": 1.4287520546213175
+        }, 
+        {
+            "source": "JesusHRChrist", 
+            "target": "xboxone", 
+            "value": 10.579628587507035
+        }, 
+        {
+            "source": "Pudie", 
+            "target": "SquaredCircle", 
+            "value": 18.7697559742066
+        }, 
+        {
+            "source": "Pudie", 
+            "target": "television", 
+            "value": 2.5373134328358207
+        }, 
+        {
+            "source": "ReactorofR", 
+            "target": "dayz", 
+            "value": 1.9740552735476595
+        }, 
+        {
+            "source": "ReactorofR", 
+            "target": "DotA2", 
+            "value": 2.2422062350119907
+        }, 
+        {
+            "source": "ReactorofR", 
+            "target": "anime", 
+            "value": 10.677749360613811
+        }, 
+        {
+            "source": "ReactorofR", 
+            "target": "Games", 
+            "value": 1.544050862851953
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "mildlyinteresting", 
+            "value": 1.330166270783848
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "TrollXChromosomes", 
+            "value": 7.526427061310782
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "TwoXChromosomes", 
+            "value": 2.4495677233429394
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "aww", 
+            "value": 1.0866612333605
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "keto", 
+            "value": 3.866171003717472
+        }, 
+        {
+            "source": "apcolleen", 
+            "target": "LifeProTips", 
+            "value": 1.9851116625310175
+        }, 
+        {
+            "source": "Conflux", 
+            "target": "gaybros", 
+            "value": 40.9967845659164
+        }, 
+        {
+            "source": "Conflux", 
+            "target": "news", 
+            "value": 1.080859214666849
+        }, 
+        {
+            "source": "Conflux", 
+            "target": "SubredditDrama", 
+            "value": 4.782993799822853
+        }, 
+        {
+            "source": "KeeperEUSC", 
+            "target": "malefashionadvice", 
+            "value": 1.5025041736227045
+        }, 
+        {
+            "source": "KeeperEUSC", 
+            "target": "MLS", 
+            "value": 1.1354420113544201
+        }, 
+        {
+            "source": "KeeperEUSC", 
+            "target": "NASCAR", 
+            "value": 4.370939161252215
+        }, 
+        {
+            "source": "bacondev", 
+            "target": "tifu", 
+            "value": 1.3783597518952446
+        }, 
+        {
+            "source": "bacondev", 
+            "target": "AskMen", 
+            "value": 1.0046367851622875
+        }, 
+        {
+            "source": "bacondev", 
+            "target": "woahdude", 
+            "value": 2.4006622516556293
+        }, 
+        {
+            "source": "mazack", 
+            "target": "dayz", 
+            "value": 9.419063733784546
+        }, 
+        {
+            "source": "dak0tah", 
+            "target": "reactiongifs", 
+            "value": 2.0257826887661143
+        }, 
+        {
+            "source": "kellswastaken", 
+            "target": "BabyBumps", 
+            "value": 2.3772609819121446
+        }, 
+        {
+            "source": "kellswastaken", 
+            "target": "sydney", 
+            "value": 4.212348528563186
+        }, 
+        {
+            "source": "RUPTURED_ASSHOLE", 
+            "target": "nba", 
+            "value": 3.9415411868910537
+        }, 
+        {
+            "source": "tethercat", 
+            "target": "anime", 
+            "value": 2.078005115089514
+        }, 
+        {
+            "source": "dasfeiz", 
+            "target": "hockey", 
+            "value": 1.1047543894259222
+        }, 
+        {
+            "source": "wuu", 
+            "target": "RandomActsofMakeup", 
+            "value": 1.4234875444839856
+        }, 
+        {
+            "source": "wuu", 
+            "target": "MakeupAddiction", 
+            "value": 5.120481927710843
+        }, 
+        {
+            "source": "wuu", 
+            "target": "secretsanta", 
+            "value": 1.627339300244101
+        }, 
+        {
+            "source": "Talesavo", 
+            "target": "DotA2", 
+            "value": 17.961630695443645
+        }, 
+        {
+            "source": "Underoathftw", 
+            "target": "malefashionadvice", 
+            "value": 5.564830272676683
+        }, 
+        {
+            "source": "wickedspork", 
+            "target": "cringe", 
+            "value": 1.5143320713899404
+        }, 
+        {
+            "source": "wickedspork", 
+            "target": "pokemon", 
+            "value": 3.56330553449583
+        }, 
+        {
+            "source": "dboti", 
+            "target": "nba", 
+            "value": 1.6939769707705936
+        }, 
+        {
+            "source": "dboti", 
+            "target": "fantasyfootball", 
+            "value": 1.5171679531541125
+        }, 
+        {
+            "source": "dboti", 
+            "target": "nfl", 
+            "value": 1.2076116125884362
+        }, 
+        {
+            "source": "Whazzits", 
+            "target": "TrollXChromosomes", 
+            "value": 1.9873150105708246
+        }, 
+        {
+            "source": "Whazzits", 
+            "target": "asoiaf", 
+            "value": 1.6212232866617537
+        }, 
+        {
+            "source": "Whazzits", 
+            "target": "anime", 
+            "value": 2.1099744245524295
+        }, 
+        {
+            "source": "Mishiiee", 
+            "target": "Random_Acts_Of_Amazon", 
+            "value": 1.213967244956518
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "LifeProTips", 
+            "value": 4.714640198511166
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "Firearms", 
+            "value": 8.754448398576512
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "politics", 
+            "value": 2.2786037491919844
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "Android", 
+            "value": 1.0902747492368077
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "technology", 
+            "value": 1.1731479469910928
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "worldnews", 
+            "value": 1.4063093880653743
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "progun", 
+            "value": 6.434782608695652
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "TumblrInAction", 
+            "value": 3.011658031088083
+        }, 
+        {
+            "source": "darlantan", 
+            "target": "Seattle", 
+            "value": 10.363086232980333
+        }, 
+        {
+            "source": "RosyGraymalkin", 
+            "target": "BabyBumps", 
+            "value": 4.3927648578811365
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "mildlyinteresting", 
+            "value": 1.0926365795724466
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "AdviceAnimals", 
+            "value": 1.7122005988023954
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "news", 
+            "value": 2.380626624709263
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "todayilearned", 
+            "value": 2.047396421086571
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "reactiongifs", 
+            "value": 2.9465930018416207
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "tifu", 
+            "value": 1.3783597518952446
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "politics", 
+            "value": 2.925016160310278
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "technology", 
+            "value": 1.2600477949163589
+        }, 
+        {
+            "source": "moogle516", 
+            "target": "nottheonion", 
+            "value": 3.3707865168539324
+        }, 
+        {
+            "source": "waldotherogue", 
+            "target": "casualiama", 
+            "value": 1.6776075857038657
+        }, 
+        {
+            "source": "TwoHeadedPanthr", 
+            "target": "hockey", 
+            "value": 22.64746498323141
+        }, 
+        {
+            "source": "TwoHeadedPanthr", 
+            "target": "wow", 
+            "value": 3.8845035313668466
+        }, 
+        {
+            "source": "TwoHeadedPanthr", 
+            "target": "asoiaf", 
+            "value": 1.1790714812085483
+        }, 
+        {
+            "source": "TwoHeadedPanthr", 
+            "target": "hearthstone", 
+            "value": 16.495402920497565
+        }, 
+        {
+            "source": "rkinghrsppl", 
+            "target": "MakeupAddiction", 
+            "value": 1.4683734939759037
+        }, 
+        {
+            "source": "marco8_goal", 
+            "target": "soccer", 
+            "value": 3.359124363087375
+        }, 
+        {
+            "source": "TheGooglePlex", 
+            "target": "GlobalOffensive", 
+            "value": 2.0085470085470085
+        }, 
+        {
+            "source": "trickedoutdavid", 
+            "target": "dogecoin", 
+            "value": 1.8363064008394543
+        }, 
+        {
+            "source": "id_kai", 
+            "target": "pokemon", 
+            "value": 10.614101592115238
+        }, 
+        {
+            "source": "id_kai", 
+            "target": "whowouldwin", 
+            "value": 1.89873417721519
+        }, 
+        {
+            "source": "id_kai", 
+            "target": "smashbros", 
+            "value": 1.388147357180993
+        }, 
+        {
+            "source": "th3cavalry", 
+            "target": "secretsanta", 
+            "value": 1.2205044751830758
+        }, 
+        {
+            "source": "bactchan", 
+            "target": "sex", 
+            "value": 4.566473988439306
+        }, 
+        {
+            "source": "bactchan", 
+            "target": "reactiongifs", 
+            "value": 1.043585021485574
+        }, 
+        {
+            "source": "bactchan", 
+            "target": "DnD", 
+            "value": 1.52
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "trees", 
+            "value": 1.8269865727492847
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "cringepics", 
+            "value": 1.9920318725099602
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "4chan", 
+            "value": 1.5312916111850865
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "mildlyinteresting", 
+            "value": 2.0427553444180524
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "tifu", 
+            "value": 1.2405237767057202
+        }, 
+        {
+            "source": "TheDreadGazeebo", 
+            "target": "pokemon", 
+            "value": 1.8953752843062925
+        }, 
+        {
+            "source": "Drshibby", 
+            "target": "electronic_cigarette", 
+            "value": 2.278240691910136
+        }, 
+        {
+            "source": "Graywolves", 
+            "target": "Fitness", 
+            "value": 1.3192612137203166
+        }, 
+        {
+            "source": "sandmyth", 
+            "target": "Frugal", 
+            "value": 1.128526645768025
+        }, 
+        {
+            "source": "sandmyth", 
+            "target": "techsupport", 
+            "value": 1.583531274742676
+        }, 
+        {
+            "source": "MushroomLizard", 
+            "target": "hockey", 
+            "value": 2.6040639179325313
+        }, 
+        {
+            "source": "Aaron215", 
+            "target": "self", 
+            "value": 1.7940199335548173
+        }, 
+        {
+            "source": "Aaron215", 
+            "target": "TagPro", 
+            "value": 81.1332503113325
+        }, 
+        {
+            "source": "beanieb", 
+            "target": "keto", 
+            "value": 1.1152416356877324
+        }, 
+        {
+            "source": "darkangelle", 
+            "target": "sex", 
+            "value": 1.0404624277456647
+        }, 
+        {
+            "source": "LotoSage", 
+            "target": "smashbros", 
+            "value": 1.0678056593699947
+        }, 
+        {
+            "source": "LotoSage", 
+            "target": "cringe", 
+            "value": 1.2439156300703083
+        }, 
+        {
+            "source": "LotoSage", 
+            "target": "changemyview", 
+            "value": 1.3270882123341141
+        }, 
+        {
+            "source": "entwithapenis", 
+            "target": "legaladvice", 
+            "value": 1.0702341137123745
+        }, 
+        {
+            "source": "hovding", 
+            "target": "rpg", 
+            "value": 18.457101658255226
+        }, 
+        {
+            "source": "hovding", 
+            "target": "DnD", 
+            "value": 10.56
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "gifs", 
+            "value": 1.1816838995568686
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "magicTCG", 
+            "value": 1.0833880499015103
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "sex", 
+            "value": 3.1791907514450863
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "gameofthrones", 
+            "value": 4.434513578549329
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "drunk", 
+            "value": 2.7755102040816326
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "reactiongifs", 
+            "value": 3.314917127071823
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "tifu", 
+            "value": 1.3094417643004823
+        }, 
+        {
+            "source": "supertigger", 
+            "target": "self", 
+            "value": 3.255813953488372
+        }, 
+        {
+            "source": "BoSolaris", 
+            "target": "DestinyTheGame", 
+            "value": 13.030432918988428
+        }, 
+        {
+            "source": "BoSolaris", 
+            "target": "DarkSouls2", 
+            "value": 40.30571198712792
+        }, 
+        {
+            "source": "BoSolaris", 
+            "target": "keto", 
+            "value": 2.0074349442379185
+        }, 
+        {
+            "source": "Forever_Flaccid", 
+            "target": "DestinyTheGame", 
+            "value": 4.243463351907415
+        }, 
+        {
+            "source": "Forever_Flaccid", 
+            "target": "fantasyfootball", 
+            "value": 2.5818472185254193
+        }, 
+        {
+            "source": "Forever_Flaccid", 
+            "target": "DarkSouls2", 
+            "value": 2.091713596138375
+        }, 
+        {
+            "source": "KnittedOwl", 
+            "target": "TwoXChromosomes", 
+            "value": 1.1527377521613833
+        }, 
+        {
+            "source": "Pand0rah", 
+            "target": "ACTrade", 
+            "value": 1.2010981468771447
+        }, 
+        {
+            "source": "UCBCarebear", 
+            "target": "DotA2", 
+            "value": 1.1390887290167866
+        }, 
+        {
+            "source": "christofrawr", 
+            "target": "opiates", 
+            "value": 1.0230179028132993
+        }, 
+        {
+            "source": "sarawoof", 
+            "target": "AskWomen", 
+            "value": 2.818679007151872
+        }, 
+        {
+            "source": "brinkofhumor", 
+            "target": "fantasyfootball", 
+            "value": 2.262443438914027
+        }, 
+        {
+            "source": "brinkofhumor", 
+            "target": "nfl", 
+            "value": 1.0063430104903635
+        }, 
+        {
+            "source": "iHardlyEverComment", 
+            "target": "drunk", 
+            "value": 4.081632653061225
+        }, 
+        {
+            "source": "iHardlyEverComment", 
+            "target": "woahdude", 
+            "value": 2.06953642384106
+        }, 
+        {
+            "source": "TommyTenToes", 
+            "target": "DotA2", 
+            "value": 3.0215827338129495
+        }, 
+        {
+            "source": "Speaker4theDead", 
+            "target": "fantasyfootball", 
+            "value": 1.5171679531541125
+        }, 
+        {
+            "source": "Speaker4theDead", 
+            "target": "nfl", 
+            "value": 1.4210783117833616
+        }, 
+        {
+            "source": "iKidCudi", 
+            "target": "Fitness", 
+            "value": 1.7810026385224276
+        }, 
+        {
+            "source": "sgasph", 
+            "target": "hearthstone", 
+            "value": 1.9469983775013522
+        }, 
+        {
+            "source": "awesoMetrical", 
+            "target": "smashbros", 
+            "value": 1.174586225306994
+        }, 
+        {
+            "source": "TonightsWhiteKnight", 
+            "target": "pcmasterrace", 
+            "value": 1.5648510382184775
+        }, 
+        {
+            "source": "TonightsWhiteKnight", 
+            "target": "dogecoin", 
+            "value": 4.634487583071004
+        }, 
+        {
+            "source": "TonightsWhiteKnight", 
+            "target": "rpg", 
+            "value": 2.0908435472242246
+        }, 
+        {
+            "source": "TonightsWhiteKnight", 
+            "target": "DnD", 
+            "value": 5.52
+        }, 
+        {
+            "source": "TheyCallMeStone", 
+            "target": "Music", 
+            "value": 1.00080064051241
+        }, 
+        {
+            "source": "TheyCallMeStone", 
+            "target": "woahdude", 
+            "value": 1.076158940397351
+        }, 
+        {
+            "source": "TheyCallMeStone", 
+            "target": "gifs", 
+            "value": 1.0044313146233381
+        }, 
+        {
+            "source": "telepathetic_monkey", 
+            "target": "BabyBumps", 
+            "value": 1.4987080103359174
+        }, 
+        {
+            "source": "telepathetic_monkey", 
+            "target": "Random_Acts_Of_Pizza", 
+            "value": 1.081568273997296
+        }, 
+        {
+            "source": "telepathetic_monkey", 
+            "target": "Frugal", 
+            "value": 1.128526645768025
+        }, 
+        {
+            "source": "poopdedoop", 
+            "target": "PS4", 
+            "value": 2.0577933450087564
+        }, 
+        {
+            "source": "amagzz", 
+            "target": "leagueoflegends", 
+            "value": 1.58271573922874
+        }, 
+        {
+            "source": "jezekiant", 
+            "target": "MakeupAddiction", 
+            "value": 1.6189759036144578
+        }, 
+        {
+            "source": "calculuzz", 
+            "target": "nba", 
+            "value": 1.6164747564216122
+        }, 
+        {
+            "source": "calculuzz", 
+            "target": "fantasyfootball", 
+            "value": 10.06121905775885
+        }, 
+        {
+            "source": "calculuzz", 
+            "target": "SquaredCircle", 
+            "value": 1.3339233784296372
+        }, 
+        {
+            "source": "nickx37", 
+            "target": "fantasyfootball", 
+            "value": 1.4373170082512643
+        }, 
+        {
+            "source": "nickx37", 
+            "target": "relationships", 
+            "value": 1.0221962616822429
+        }, 
+        {
+            "source": "LonelyOnNaxos", 
+            "target": "reactiongifs", 
+            "value": 1.596071209330878
+        }, 
+        {
+            "source": "omgitsthepast", 
+            "target": "CFB", 
+            "value": 4.472523064580827
+        }, 
+        {
+            "source": "r4v5", 
+            "target": "hockey", 
+            "value": 3.787729335174591
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "self", 
+            "value": 3.7209302325581395
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "videos", 
+            "value": 1.9549691320663358
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "whowouldwin", 
+            "value": 2.320675105485232
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "worldnews", 
+            "value": 2.5845686050931205
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "explainlikeimfive", 
+            "value": 1.2700784460216659
+        }, 
+        {
+            "source": "Quetz23", 
+            "target": "leagueoflegends", 
+            "value": 1.4696646149981158
+        }, 
+        {
+            "source": "s32", 
+            "target": "electronic_cigarette", 
+            "value": 1.3817107900010548
+        }, 
+        {
+            "source": "s32", 
+            "target": "Bitcoin", 
+            "value": 1.7301038062283738
+        }, 
+        {
+            "source": "s32", 
+            "target": "Seattle", 
+            "value": 9.001512859304086
+        }, 
+        {
+            "source": "s32", 
+            "target": "Android", 
+            "value": 1.569995638901003
+        }, 
+        {
+            "source": "s32", 
+            "target": "guns", 
+            "value": 2.015900056785917
+        }, 
+        {
+            "source": "RainbowDashPro", 
+            "target": "smashbros", 
+            "value": 1.3347570742124935
+        }, 
+        {
+            "source": "Kinematic9", 
+            "target": "MLS", 
+            "value": 2.51419302514193
+        }, 
+        {
+            "source": "abigaila", 
+            "target": "Frugal", 
+            "value": 1.2539184952978055
+        }, 
+        {
+            "source": "wittyamber", 
+            "target": "secretsanta", 
+            "value": 1.0577705451586654
+        }, 
+        {
+            "source": "shavingourbeards", 
+            "target": "RandomActsOfPizza", 
+            "value": 1.1299435028248588
+        }, 
+        {
+            "source": "Cmdr_Taw", 
+            "target": "TrollXChromosomes", 
+            "value": 6.93446088794926
+        }, 
+        {
+            "source": "anointednonsense", 
+            "target": "whowouldwin", 
+            "value": 1.5471167369901548
+        }, 
+        {
+            "source": "anointednonsense", 
+            "target": "casualiama", 
+            "value": 2.62582056892779
+        }, 
+        {
+            "source": "Hornstar19", 
+            "target": "politics", 
+            "value": 1.1473820297349708
+        }, 
+        {
+            "source": "Hornstar19", 
+            "target": "nfl", 
+            "value": 1.7138326421078314
+        }, 
+        {
+            "source": "aaronthehuman", 
+            "target": "fantasyfootball", 
+            "value": 1.1179132286398723
+        }, 
+        {
+            "source": "sterling_mallory", 
+            "target": "gifs", 
+            "value": 1.4180206794682424
+        }, 
+        {
+            "source": "sterling_mallory", 
+            "target": "nfl", 
+            "value": 2.2322517687240793
+        }, 
+        {
+            "source": "sterling_mallory", 
+            "target": "SubredditDrama", 
+            "value": 5.727782698553292
+        }, 
+        {
+            "source": "sterling_mallory", 
+            "target": "Frugal", 
+            "value": 1.0031347962382446
+        }, 
+        {
+            "source": "sterling_mallory", 
+            "target": "reactiongifs", 
+            "value": 1.780233271945979
+        }, 
+        {
+            "source": "RogueNine", 
+            "target": "asoiaf", 
+            "value": 6.0427413411938105
+        }, 
+        {
+            "source": "StayFrostyIcebrgSlim", 
+            "target": "4chan", 
+            "value": 1.2649800266311584
+        }, 
+        {
+            "source": "poutina", 
+            "target": "TrollXChromosomes", 
+            "value": 1.945031712473573
+        }, 
+        {
+            "source": "poutina", 
+            "target": "TwoXChromosomes", 
+            "value": 3.4101825168107585
+        }, 
+        {
+            "source": "SRowan33", 
+            "target": "RandomActsOfPizza", 
+            "value": 1.1299435028248588
+        }, 
+        {
+            "source": "strictlycomeprancing", 
+            "target": "dogemarket", 
+            "value": 14.607464607464607
+        }, 
+        {
+            "source": "strictlycomeprancing", 
+            "target": "dogecoin", 
+            "value": 27.212311997201823
+        }, 
+        {
+            "source": "nemisis54", 
+            "target": "nfl", 
+            "value": 4.49499878019029
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "mildlyinteresting", 
+            "value": 2.9453681710213777
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "todayilearned", 
+            "value": 1.475092697082057
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "politics", 
+            "value": 4.201680672268908
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "technology", 
+            "value": 1.2600477949163589
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "nottheonion", 
+            "value": 2.511566424322538
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "explainlikeimfive", 
+            "value": 2.6148673888681357
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "Frugal", 
+            "value": 9.341692789968652
+        }, 
+        {
+            "source": "jlking3", 
+            "target": "LifeProTips", 
+            "value": 5.5417700578990905
+        }, 
+        {
+            "source": "rgundran87", 
+            "target": "movies", 
+            "value": 1.1405176195350197
+        }, 
+        {
+            "source": "bucknakid14", 
+            "target": "tifu", 
+            "value": 2.3432115782219163
+        }, 
+        {
+            "source": "bucknakid14", 
+            "target": "BabyBumps", 
+            "value": 1.9121447028423773
+        }, 
+        {
+            "source": "bucknakid14", 
+            "target": "sex", 
+            "value": 2.832369942196532
+        }, 
+        {
+            "source": "aafter", 
+            "target": "books", 
+            "value": 1.0664479081214109
+        }, 
+        {
+            "source": "Gephoria", 
+            "target": "pcmasterrace", 
+            "value": 1.1435449894673488
+        }, 
+        {
+            "source": "sicilianhotdog", 
+            "target": "IAmA", 
+            "value": 3.4835458049214347
+        }, 
+        {
+            "source": "sicilianhotdog", 
+            "target": "explainlikeimfive", 
+            "value": 2.6522226372805378
+        }, 
+        {
+            "source": "spazmodial", 
+            "target": "cringe", 
+            "value": 2.055164954029205
+        }, 
+        {
+            "source": "NorthAve", 
+            "target": "casualiama", 
+            "value": 1.604668125455872
+        }, 
+        {
+            "source": "NorthAve", 
+            "target": "AskMen", 
+            "value": 1.2364760432766615
+        }, 
+        {
+            "source": "zedoktar", 
+            "target": "worldnews", 
+            "value": 1.0642341315089319
+        }, 
+        {
+            "source": "zedoktar", 
+            "target": "sex", 
+            "value": 3.410404624277456
+        }, 
+        {
+            "source": "NigelxD", 
+            "target": "cringepics", 
+            "value": 1.2871590560833588
+        }, 
+        {
+            "source": "aFunnyWorldWeLiveIn", 
+            "target": "AskWomen", 
+            "value": 6.562894404711822
+        }, 
+        {
+            "source": "aFunnyWorldWeLiveIn", 
+            "target": "TwoXChromosomes", 
+            "value": 2.1133525456292026
+        }, 
+        {
+            "source": "aFunnyWorldWeLiveIn", 
+            "target": "TrollXChromosomes", 
+            "value": 6.849894291754757
+        }, 
+        {
+            "source": "aFunnyWorldWeLiveIn", 
+            "target": "relationships", 
+            "value": 5.14018691588785
+        }, 
+        {
+            "source": "aFunnyWorldWeLiveIn", 
+            "target": "AskMen", 
+            "value": 1.0819165378670788
+        }, 
+        {
+            "source": "unkinhead", 
+            "target": "television", 
+            "value": 5.895522388059701
+        }, 
+        {
+            "source": "pregosaurusrex", 
+            "target": "MakeupAddiction", 
+            "value": 1.167168674698795
+        }, 
+        {
+            "source": "pregosaurusrex", 
+            "target": "redditgetsdrawn", 
+            "value": 2.4600246002460024
+        }, 
+        {
+            "source": "pregosaurusrex", 
+            "target": "RandomActsofMakeup", 
+            "value": 38.4087442806304
+        }, 
+        {
+            "source": "howgoyoufar", 
+            "target": "soccer", 
+            "value": 1.321003963011889
+        }, 
+        {
+            "source": "jfkk", 
+            "target": "soccer", 
+            "value": 2.6608794112096623
+        }, 
+        {
+            "source": "Miguel2592", 
+            "target": "relationships", 
+            "value": 1.6939252336448596
+        }, 
+        {
+            "source": "roxie1127", 
+            "target": "BabyBumps", 
+            "value": 4.1343669250646
+        }, 
+        {
+            "source": "roxie1127", 
+            "target": "fatlogic", 
+            "value": 1.0069713400464757
+        }, 
+        {
+            "source": "CcaseyC", 
+            "target": "whowouldwin", 
+            "value": 5.414908579465542
+        }, 
+        {
+            "source": "Tricher619", 
+            "target": "SquaredCircle", 
+            "value": 16.550764951321277
+        }, 
+        {
+            "source": "Wolfeman0101", 
+            "target": "xboxone", 
+            "value": 3.9392234102419805
+        }, 
+        {
+            "source": "Wolfeman0101", 
+            "target": "CollegeBasketball", 
+            "value": 1.7680921052631577
+        }, 
+        {
+            "source": "Wolfeman0101", 
+            "target": "television", 
+            "value": 3.3582089552238807
+        }, 
+        {
+            "source": "Wolfeman0101", 
+            "target": "DestinyTheGame", 
+            "value": 3.1718816973853405
+        }, 
+        {
+            "source": "Mysteryman64", 
+            "target": "Eve", 
+            "value": 1.7490494296577948
+        }, 
+        {
+            "source": "Mysteryman64", 
+            "target": "Games", 
+            "value": 3.6557674841053585
+        }, 
+        {
+            "source": "Mysteryman64", 
+            "target": "news", 
+            "value": 2.6953071555616366
+        }, 
+        {
+            "source": "Mysteryman64", 
+            "target": "anime", 
+            "value": 3.7404092071611252
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "buildapc", 
+            "value": 3.446528129751647
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "techsupport", 
+            "value": 6.25494853523357
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "funny", 
+            "value": 1.0363080593454113
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "nottheonion", 
+            "value": 38.53271645736947
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "news", 
+            "value": 1.5186756054179777
+        }, 
+        {
+            "source": "Knowltey", 
+            "target": "changemyview", 
+            "value": 6.791569086651054
+        }, 
+        {
+            "source": "Twilight_Sparkles", 
+            "target": "pcmasterrace", 
+            "value": 1.4745711706289497
+        }, 
+        {
+            "source": "Twilight_Sparkles", 
+            "target": "DarkSouls2", 
+            "value": 3.8616251005631534
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "reactiongifs", 
+            "value": 5.586249232658073
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "changemyview", 
+            "value": 29.7423887587822
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "Android", 
+            "value": 1.6136066288704751
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "funny", 
+            "value": 3.9476627152762247
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "AskReddit", 
+            "value": 1.3340976015465194
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "woahdude", 
+            "value": 7.201986754966887
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "explainlikeimfive", 
+            "value": 2.465446395218528
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "gaming", 
+            "value": 1.5916517339517235
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "LifeProTips", 
+            "value": 1.0752688172043012
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "pics", 
+            "value": 3.1831335262505167
+        }, 
+        {
+            "source": "YoungSerious", 
+            "target": "DotA2", 
+            "value": 3.3093525179856114
+        }, 
+        {
+            "source": "LittleRedReadingHood", 
+            "target": "relationships", 
+            "value": 2.0151869158878504
+        }, 
+        {
+            "source": "SourPatchAdult", 
+            "target": "casualiama", 
+            "value": 1.0940919037199124
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "todayilearned", 
+            "value": 3.8126712880864098
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "IAmA", 
+            "value": 2.1345982804624963
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "Justrolledintotheshop", 
+            "value": 25.999208547685004
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "Music", 
+            "value": 1.9615692554043236
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "technology", 
+            "value": 9.689333043667174
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "funny", 
+            "value": 5.271005740699321
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "drunk", 
+            "value": 26.857142857142858
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "AskReddit", 
+            "value": 6.4693056398498445
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "worldnews", 
+            "value": 4.380463702014444
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "gaming", 
+            "value": 2.076525772109202
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "WTF", 
+            "value": 9.19153031761309
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "aww", 
+            "value": 4.265145340939962
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "pics", 
+            "value": 3.488011575031005
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "atheism", 
+            "value": 1.834862385321101
+        }, 
+        {
+            "source": "Megaross", 
+            "target": "AdviceAnimals", 
+            "value": 11.405314371257486
+        }, 
+        {
+            "source": "fullmetalutes", 
+            "target": "PS4", 
+            "value": 3.327495621716287
+        }, 
+        {
+            "source": "fullmetalutes", 
+            "target": "NASCAR", 
+            "value": 1.1222681630242175
+        }, 
+        {
+            "source": "fullmetalutes", 
+            "target": "secretsanta", 
+            "value": 1.3832384052074858
+        }, 
+        {
+            "source": "ohem", 
+            "target": "malefashionadvice", 
+            "value": 4.284919309961046
+        }, 
+        {
+            "source": "megthegreatone", 
+            "target": "TrollXChromosomes", 
+            "value": 1.0993657505285412
+        }, 
+        {
+            "source": "TrapandRelease", 
+            "target": "keto", 
+            "value": 4.4609665427509295
+        }, 
+        {
+            "source": "Sparkitten", 
+            "target": "MakeupAddiction", 
+            "value": 1.0542168674698795
+        }, 
+        {
+            "source": "Sparkitten", 
+            "target": "RandomActsofMakeup", 
+            "value": 2.2623284189120487
+        }, 
+        {
+            "source": "AK40Sarah", 
+            "target": "OkCupid", 
+            "value": 1.0855949895615866
+        }, 
+        {
+            "source": "killhimalready", 
+            "target": "fantasyfootball", 
+            "value": 1.4905509715198297
+        }, 
+        {
+            "source": "killhimalready", 
+            "target": "SquaredCircle", 
+            "value": 26.92502212669111
+        }, 
+        {
+            "source": "wnbaloll", 
+            "target": "xboxone", 
+            "value": 2.9262802476083283
+        }, 
+        {
+            "source": "wnbaloll", 
+            "target": "hiphopheads", 
+            "value": 1.400740621478023
+        }, 
+        {
+            "source": "wnbaloll", 
+            "target": "AskMen", 
+            "value": 2.6790314270994333
+        }, 
+        {
+            "source": "javi_intheair", 
+            "target": "hiphopheads", 
+            "value": 4.3471260666559335
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "AskWomen", 
+            "value": 1.9352124526714347
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "TrollXChromosomes", 
+            "value": 1.0993657505285412
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "relationships", 
+            "value": 1.7523364485981308
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "casualiama", 
+            "value": 2.0423048869438367
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "Austin", 
+            "value": 2.695697252462416
+        }, 
+        {
+            "source": "pooncartercash", 
+            "target": "OkCupid", 
+            "value": 2.1294363256784967
+        }, 
+        {
+            "source": "rabidsi", 
+            "target": "gameofthrones", 
+            "value": 1.684427638363699
+        }, 
+        {
+            "source": "rabidsi", 
+            "target": "gaming", 
+            "value": 1.075155475914409
+        }, 
+        {
+            "source": "rabidsi", 
+            "target": "anime", 
+            "value": 21.41943734015345
+        }, 
+        {
+            "source": "Flippy02", 
+            "target": "politics", 
+            "value": 1.0827407886231415
+        }, 
+        {
+            "source": "TallGlass", 
+            "target": "Android", 
+            "value": 2.3549934583515046
+        }, 
+        {
+            "source": "TallGlass", 
+            "target": "bicycling", 
+            "value": 4.011461318051576
+        }, 
+        {
+            "source": "TallGlass", 
+            "target": "motorcycles", 
+            "value": 1.1235955056179776
+        }, 
+        {
+            "source": "nottsoathletic", 
+            "target": "cringe", 
+            "value": 2.3255813953488373
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "cringe", 
+            "value": 3.028664142779881
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "TwoXChromosomes", 
+            "value": 14.024975984630164
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "legaladvice", 
+            "value": 1.2709030100334449
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "news", 
+            "value": 1.3681762210972774
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "drunk", 
+            "value": 3.428571428571429
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "TrollXChromosomes", 
+            "value": 1.1839323467230445
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "LifeProTips", 
+            "value": 1.0752688172043012
+        }, 
+        {
+            "source": "avalon18", 
+            "target": "television", 
+            "value": 1.1940298507462688
+        }, 
+        {
+            "source": "Zeis", 
+            "target": "gameofthrones", 
+            "value": 1.5469233413544174
+        }, 
+        {
+            "source": "Ander1ap", 
+            "target": "hockey", 
+            "value": 15.131189583744328
+        }, 
+        {
+            "source": "shhkari", 
+            "target": "magicTCG", 
+            "value": 5.055810899540381
+        }, 
+        {
+            "source": "shhkari", 
+            "target": "casualiama", 
+            "value": 2.261123267687819
+        }, 
+        {
+            "source": "shhkari", 
+            "target": "SubredditDrama", 
+            "value": 4.635370534396221
+        }, 
+        {
+            "source": "driftsc", 
+            "target": "Justrolledintotheshop", 
+            "value": 5.7380292837356555
+        }, 
+        {
+            "source": "driftsc", 
+            "target": "tifu", 
+            "value": 1.1716057891109581
+        }, 
+        {
+            "source": "driftsc", 
+            "target": "gifs", 
+            "value": 1.6248153618906942
+        }, 
+        {
+            "source": "Katzenklavier", 
+            "target": "whowouldwin", 
+            "value": 4.008438818565401
+        }, 
+        {
+            "source": "Katzenklavier", 
+            "target": "AskReddit", 
+            "value": 1.2868928001438622
+        }, 
+        {
+            "source": "AndrewTindall", 
+            "target": "asoiaf", 
+            "value": 3.0213706705969052
+        }, 
+        {
+            "source": "frankcbright", 
+            "target": "Firearms", 
+            "value": 1.1387900355871887
+        }, 
+        {
+            "source": "pipedreamexplosion", 
+            "target": "AskMen", 
+            "value": 1.7001545595054095
+        }, 
+        {
+            "source": "withoutamartyr", 
+            "target": "cringepics", 
+            "value": 1.4097456328532025
+        }, 
+        {
+            "source": "DrPepperHelp", 
+            "target": "electronic_cigarette", 
+            "value": 28.530745701930176
+        }, 
+        {
+            "source": "cuttingagent", 
+            "target": "electronic_cigarette", 
+            "value": 1.1602151671764582
+        }, 
+        {
+            "source": "jedberg", 
+            "target": "BabyBumps", 
+            "value": 1.6537467700258397
+        }, 
+        {
+            "source": "f33dback", 
+            "target": "newzealand", 
+            "value": 1.3611615245009074
+        }, 
+        {
+            "source": "6995", 
+            "target": "RandomActsOfPizza", 
+            "value": 2.58272800645682
+        }, 
+        {
+            "source": "theserpentsmiles", 
+            "target": "whowouldwin", 
+            "value": 5.977496483825598
+        }, 
+        {
+            "source": "theserpentsmiles", 
+            "target": "sex", 
+            "value": 1.1560693641618496
+        }, 
+        {
+            "source": "LittleMissBlue", 
+            "target": "RandomActsofMakeup", 
+            "value": 1.4489069649211999
+        }, 
+        {
+            "source": "course_you_do", 
+            "target": "gaybros", 
+            "value": 1.2057877813504823
+        }, 
+        {
+            "source": "salmonerd202", 
+            "target": "bicycling", 
+            "value": 4.799426934097421
+        }, 
+        {
+            "source": "xAbaddon", 
+            "target": "SquaredCircle", 
+            "value": 1.1632317612846124
+        }, 
+        {
+            "source": "Sir_Dalek", 
+            "target": "Android", 
+            "value": 5.146096816397732
+        }, 
+        {
+            "source": "genericgamer", 
+            "target": "smashbros", 
+            "value": 3.043246129204485
+        }, 
+        {
+            "source": "MarbhDamhsa", 
+            "target": "Random_Acts_Of_Amazon", 
+            "value": 3.2379817242749307
+        }, 
+        {
+            "source": "MarbhDamhsa", 
+            "target": "Wishlist", 
+            "value": 9.684857801691008
+        }, 
+        {
+            "source": "FPSalchemy", 
+            "target": "guns", 
+            "value": 1.7319704713231119
+        }, 
+        {
+            "source": "Orcasmic", 
+            "target": "AskMen", 
+            "value": 1.1591962905718702
+        }, 
+        {
+            "source": "Orcasmic", 
+            "target": "TumblrInAction", 
+            "value": 1.0362694300518136
+        }, 
+        {
+            "source": "oneir0naut0", 
+            "target": "trees", 
+            "value": 1.2766894122826327
+        }, 
+        {
+            "source": "ztfreeman", 
+            "target": "Games", 
+            "value": 1.4532243415077202
+        }, 
+        {
+            "source": "DocAtDuq", 
+            "target": "hockey", 
+            "value": 8.956401657131584
+        }, 
+        {
+            "source": "DocAtDuq", 
+            "target": "keto", 
+            "value": 1.338289962825279
+        }, 
+        {
+            "source": "DocAtDuq", 
+            "target": "motorcycles", 
+            "value": 2.7098479841374754
+        }, 
+        {
+            "source": "CappyTheCook", 
+            "target": "DnD", 
+            "value": 1.2
+        }, 
+        {
+            "source": "CappyTheCook", 
+            "target": "Fitness", 
+            "value": 9.300791556728234
+        }, 
+        {
+            "source": "kaptainkeel", 
+            "target": "asoiaf", 
+            "value": 19.233603537214446
+        }, 
+        {
+            "source": "kaptainkeel", 
+            "target": "technology", 
+            "value": 1.021073213121877
+        }, 
+        {
+            "source": "kaptainkeel", 
+            "target": "DotA2", 
+            "value": 2.2182254196642686
+        }, 
+        {
+            "source": "kaptainkeel", 
+            "target": "techsupport", 
+            "value": 1.0292953285827395
+        }, 
+        {
+            "source": "Mildcorma", 
+            "target": "worldnews", 
+            "value": 1.5488407449638921
+        }, 
+        {
+            "source": "Mildcorma", 
+            "target": "soccer", 
+            "value": 14.94621626722023
+        }, 
+        {
+            "source": "Mildcorma", 
+            "target": "JusticePorn", 
+            "value": 1.539708265802269
+        }, 
+        {
+            "source": "Mildcorma", 
+            "target": "hearthstone", 
+            "value": 3.515413737155219
+        }
+    ]
+}

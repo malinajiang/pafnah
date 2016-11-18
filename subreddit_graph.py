@@ -1,10 +1,8 @@
 import codecs
 import json
 import math
-import pickle
-
 import numpy as np
-
+import pickle
 import collections
 
 def read_dataset(path):
@@ -19,6 +17,20 @@ def subreddit_subscribers():
   subscribers_file.close()
 
   return subscribers
+
+def subreddit_comments():
+  subreddit_comments_file = open('subreddit_comments.txt', 'r')
+  comments = pickle.load(subreddit_comments_file)
+  subreddit_comments_file.close()
+  print comments
+  return comments
+
+def requester_comments():
+  requester_comments_file = open('requester_comments.txt', 'r')
+  comments = pickle.load(requester_comments_file)
+  requester_comments_file.close()
+
+  return comments
 
 def read_subreddits(dataset):
   d = {}
@@ -47,7 +59,7 @@ def subreddits_only_graph(subreddit_to_subscribers, subscribers):
         s = set(subreddit_to_subscribers[i])
         t = set(subreddit_to_subscribers[j])
         subreddit_pairs[(i, j)] = s.union(t)
-
+  print 
   used_subscribers = {}
   for k,v in subreddit_pairs.items():
     link = {}
@@ -96,6 +108,7 @@ def gen_requester_unweighted(dataset):
   return requesters, subreddits_unweighted
 
 def main(dataset):
+  # s_comments = subreddit_comments()
   # suscribers = subreddit_subscribers()
   requesters, subreddits_unweighted = gen_requester_unweighted(dataset)
   subreddit_to_subscribers = read_subreddits(dataset)
