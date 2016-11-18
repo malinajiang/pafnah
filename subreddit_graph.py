@@ -96,14 +96,14 @@ def gen_requester_unweighted(dataset):
   return requesters, subreddits_unweighted
 
 def main(dataset):
-  # suscribers = subreddit_subscribers()
+  suscribers = subreddit_subscribers()
   requesters, subreddits_unweighted = gen_requester_unweighted(dataset)
-  subreddit_to_subscribers = read_subreddits(dataset)
-  subreddits_only_graph(subreddit_to_subscribers, subreddits_unweighted)
-  # subreddits_unweighted = {k:v for k, v in subreddits_unweighted.items() if k in suscribers and suscribers[k] > 0}
-  # popular = popular_subreddits(subreddits_unweighted, suscribers, 10)
+  # subreddit_to_subscribers = read_subreddits(dataset)
+  # subreddits_only_graph(subreddit_to_subscribers, subreddits_unweighted)
+  subreddits_unweighted = {k:v for k, v in subreddits_unweighted.items() if k in suscribers and suscribers[k] > 0}
+  popular = popular_subreddits(subreddits_unweighted, suscribers, 10)
 
-  # print [(s, len(subreddits_unweighted[s]), len(subreddits_unweighted[s]) / float(suscribers[s])) for s in popular]
+  print [(s, len(subreddits_unweighted[s]), len(subreddits_unweighted[s]) / float(suscribers[s])) for s in popular]
 
 if __name__ == '__main__':
   path = './pizza_request_dataset/pizza_request_dataset.json'

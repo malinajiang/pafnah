@@ -38,6 +38,16 @@ def get_requesters_givers(dataset):
   pickle.dump(givers, givers_file)
   givers_file.close()
 
+  givers_timestamp_file = open('pizza_givers_timestamp.txt', 'wb')
+  for i in xrange(len(dataset)):
+    request = dataset[i]
+    giver = request['giver_username_if_known']
+    if giver != 'N/A':
+      timestamp = request['unix_timestamp_of_request']
+      givers_timestamp_file.write(giver + '\t' + str(timestamp) + '\n')
+  givers_timestamp_file.close()
+
+
   print 'Number of successful requests: %d' % received_pizza
   print 'Number of identifiable givers: %d' % giver_identified
 
