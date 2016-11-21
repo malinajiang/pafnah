@@ -2,6 +2,7 @@ import codecs
 import json
 import math
 import pickle
+import dill
 
 import numpy as np
 
@@ -19,6 +20,20 @@ def subreddit_subscribers():
   subscribers_file.close()
 
   return subscribers
+
+def get_givers_comments():
+  givers_comments_file = open('givers_comment_counts.txt', 'r')
+  givers_comments = dill.load(givers_comments_file)
+  givers_comments_file.close()
+
+  return givers_comments
+
+def get_subreddit_comments():
+  subreddit_comments_file = open('subreddit_comments.txt')
+  subreddit_comments = dill.load(subreddit_comments_file)
+  subreddit_comments_file.close()
+
+  return subreddit_comments
 
 def read_subreddits(dataset):
   d = {}
@@ -75,8 +90,12 @@ def subreddits_only_graph(subreddit_to_subscribers, subscribers):
   print "done"
   subscribers_graph.close()
 
-def popular_subreddits(subreddits, subscribers, top_n):
+def popular_subreddits_unweighted(subreddits, subscribers, top_n):
   popular = sorted(subreddits, key = lambda k: len(subreddits[k]) / float(subscribers[k]), reverse = True)
+  return popular[:top_n]
+
+def popular_subreddits_weighted(subreddits, comments, top_n):
+  popular = sorted(subreddits, key = lambda k: subreddits[k] / float(comments[k]), reverse = True)
   return popular[:top_n]
 
 def gen_requester_unweighted(dataset):
@@ -95,15 +114,51 @@ def gen_requester_unweighted(dataset):
 
   return requesters, subreddits_unweighted
 
+def gen_giver_unweighted(givers_comments):
+  subreddits_unweighted = collections.defaultdict(lambda: list())
+
+  for giver in givers_comments:
+    subreddits = givers_comments[giver]
+
+    for subreddit in subreddits:
+      subreddit = '/r/' + subreddit
+      subreddits_unweighted[subreddit].append(giver)
+
+  return subreddits_unweighted
+
+def gen_giver_weighted(dataset, givers_comments):
+  subreddits_weighted = collections.defaultdict(lambda: 0)
+
+  for giver in givers_comments:
+    subreddits = givers_comments[giver]
+
+    for subreddit in subreddits:
+      subreddits_weighted[subreddit] += subreddits[subreddit]
+
+  return subreddits_weighted
+
 def main(dataset):
-  suscribers = subreddit_subscribers()
-  requesters, subreddits_unweighted = gen_requester_unweighted(dataset)
+  subscribers = subreddit_subscribers()
+  givers_comments = get_givers_comments()
+  subreddit_comments = get_subreddit_comments()
+  
+  requesters, requester_subreddits_unweighted = gen_requester_unweighted(dataset)
+  requester_subreddits_unweighted = {k:v for k, v in requester_subreddits_unweighted.items() if k in subscribers}
+  requester_popular_unweighted = popular_subreddits_unweighted(requester_subreddits_unweighted, subscribers, 10)
+  print [(s, len(requester_subreddits_unweighted[s]), len(requester_subreddits_unweighted[s]) / float(subscribers[s])) for s in requester_popular_unweighted]
+
+  giver_subreddits_unweighted = gen_giver_unweighted(givers_comments)
+  giver_subreddits_unweighted = {k:v for k, v in giver_subreddits_unweighted.items() if k in subscribers}
+  giver_popular_unweighted = popular_subreddits_unweighted(giver_subreddits_unweighted, subscribers, 10)
+  print [(s, len(giver_subreddits_unweighted[s]), len(giver_subreddits_unweighted[s]) / float(subscribers[s])) for s in giver_popular_unweighted]
+
+  giver_subreddits_weighted = gen_giver_weighted(dataset, givers_comments)
+  giver_subreddits_weighted = {k:v for k, v in giver_subreddits_weighted.items() if k in subreddit_comments and subreddit_comments[k] > 1000}
+  giver_popular_weighted = popular_subreddits_weighted(giver_subreddits_weighted, subreddit_comments, 10)
+  print [(s, giver_subreddits_weighted[s], giver_subreddits_weighted[s] / float(subreddit_comments[s])) for s in giver_popular_weighted]
+
   # subreddit_to_subscribers = read_subreddits(dataset)
   # subreddits_only_graph(subreddit_to_subscribers, subreddits_unweighted)
-  subreddits_unweighted = {k:v for k, v in subreddits_unweighted.items() if k in suscribers and suscribers[k] > 0}
-  popular = popular_subreddits(subreddits_unweighted, suscribers, 10)
-
-  print [(s, len(subreddits_unweighted[s]), len(subreddits_unweighted[s]) / float(suscribers[s])) for s in popular]
 
 if __name__ == '__main__':
   path = './pizza_request_dataset/pizza_request_dataset.json'
