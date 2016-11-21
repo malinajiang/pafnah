@@ -1,11 +1,9 @@
 import codecs
 import json
 import math
-import pickle
 import dill
-
 import numpy as np
-
+import pickle
 import collections
 
 def read_dataset(path):
@@ -28,12 +26,19 @@ def get_givers_comments():
 
   return givers_comments
 
-def get_subreddit_comments():
-  subreddit_comments_file = open('subreddit_comments.txt')
-  subreddit_comments = dill.load(subreddit_comments_file)
+def subreddit_comments():
+  subreddit_comments_file = open('subreddit_comments.txt', 'r')
+  comments = pickle.load(subreddit_comments_file)
   subreddit_comments_file.close()
+  print comments
+  return comments
 
-  return subreddit_comments
+def requester_comments():
+  requester_comments_file = open('requester_comments.txt', 'r')
+  comments = pickle.load(requester_comments_file)
+  requester_comments_file.close()
+
+  return comments
 
 def read_subreddits(dataset):
   d = {}
@@ -62,7 +67,7 @@ def subreddits_only_graph(subreddit_to_subscribers, subscribers):
         s = set(subreddit_to_subscribers[i])
         t = set(subreddit_to_subscribers[j])
         subreddit_pairs[(i, j)] = s.union(t)
-
+  print 
   used_subscribers = {}
   for k,v in subreddit_pairs.items():
     link = {}
