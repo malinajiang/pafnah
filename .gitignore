@@ -1,2 +1,4 @@
 subreddit_comments/**
 comment_counts/.DS_Store
+.DS_Store
+olddata/**

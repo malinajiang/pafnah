@@ -23,7 +23,7 @@ def dot_product(subreddits1, subreddits2):
 def euclidean_dist(cluster, data):
 	s = 0.0
 	for i in xrange(len(cluster)):
-		s += (cluster[i]*data[i])**2
+		s += (cluster[i]-data[i])**2
 	return math.sqrt(s)
 
 def init():
@@ -70,7 +70,44 @@ def init():
 	# for i in xrange(len(diagonal)):
 	# 	for j in xrange(len(diagonal)):
 	# 		Dtilde[i][j] = diagonal[i]*diagonal[j]	
-	# print Dtilde		
+	# print Dtilde
+
+def calcWeightsAndDegrees(counts):
+	users = sorted(counts.keys())
+	weights = []
+	degrees = []
+	for i, u1 in enumerate(users):
+		w = [0]*len(users)
+		for j, u2 in enumerate(users):
+			if i > j:
+				w[j] = weights[j][i]
+			elif i < j:
+				w[j] = dot_product(counts[u1], counts[u2])
+		weights.append(w)
+		degrees.append(sum(w))
+	return weights, degrees
+
+def calcTopWeightsAndDegrees(weights):
+	edges = set()
+	degrees = [0]*len(weights)
+	for u, uw in enumerate(weights):
+		suw = [(uw[i], i) for i in range(len(uw))]
+		top = heapq.nlargest(5, suw)
+		d = 0
+		for e in top:
+			if e[0] > 0:
+				edges.add((u, e[1]))
+				edges.add((e[1], u))
+	I = []
+	J = []
+	V = []
+	for e in edges:
+		I.append(e[0])
+		J.append(e[1])
+		V.append(weights[e[0]][e[1]])
+	for e in edges:
+		degrees[e[0]] += weights[e[0]][e[1]]
+	return (degrees,I,J,V)
 
 def runSpectralRatioCut():
 	# e_val, e_vec = linalg.eig(L)
