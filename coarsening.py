@@ -128,7 +128,10 @@ def shortest_paths(graph, all_subscribers, requesters, givers):
 	# print all_subscribers
 	succ_short_paths = []
 	nosucc_short_paths = []
+	count = 0
 	for requester in requesters:
+		count += 1
+		print count
 		if requester in all_subscribers:
 			if graph.has_node(all_subscribers[requester]):
 				(tree, dists) = shortest_path(graph, all_subscribers[requester])
@@ -143,10 +146,6 @@ def shortest_paths(graph, all_subscribers, requesters, givers):
 
 	print "Successful: ", sum(succ_short_paths)/float(len(succ_short_paths))
 	print "Unsuccessful: ", sum(nosucc_short_paths)/float(len(nosucc_short_paths))
-
-	f = open('shortest_paths_requester_to_giver.txt', 'w')
-	dill.dump(short_paths, f)
-	f.close()
 
 def coarsening(edges, subscriber_ids, weights, num_clusters):
 	clusters = collections.defaultdict(lambda: set())
