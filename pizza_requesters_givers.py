@@ -15,6 +15,7 @@ def get_requesters_givers(dataset):
 
   requesters = set()
   givers = set()
+  successful_requests = dict()
 
   for i in xrange(len(dataset)):
     request = dataset[i]
@@ -29,6 +30,8 @@ def get_requesters_givers(dataset):
     requesters.add(requester)
     if giver != 'N/A':
       givers.add(giver)
+
+    successful_requests[requester] = giver
 
   requesters_file = open('pizza_requesters.txt', 'wb')
   pickle.dump(requesters, requesters_file)
