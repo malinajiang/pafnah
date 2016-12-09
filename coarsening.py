@@ -218,13 +218,13 @@ def clusters_to_matrices():
 	dill.dump(weights_matrix, weights_matrix_f)
 	weights_matrix_f.close()
 
-	degrees_matrix = [[0 for x in range(len(nodes))] for y in range(len(nodes))]
+	degrees_vector = list()
 	for i in xrange(len(nodes)):
-		degrees_matrix[i][i] = len(edges[nodes[i]])
+		degrees_matrix.append(weights[cluster_nodes[i]])
 
-	degrees_matrix_f = open('coarsening_degrees_matrix.txt', 'w')
-	dill.dump(degrees_matrix, degrees_matrix_f)
-	degrees_matrix_f.close()
+	degrees_vector_f = open('coarsening_degrees_vector.txt', 'w')
+	dill.dump(degrees_vector, degrees_vector_f)
+	degrees_vector_f.close()
 
 def main():
 	# edges, subscriber_ids, weights, graph, shortest_graph, requesters, givers = init()
