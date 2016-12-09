@@ -1,7 +1,7 @@
 import dill
 import collections
 import sys
-# import snap
+import snap
 # from pygraph.classes.graph import graph
 # from pygraph.algorithms.minmax import shortest_path
 
@@ -61,27 +61,40 @@ def init():
 			if not graph.IsEdge(node, neighbor):
 				graph.AddEdge(node, neighbor)
 
-	shortest_graph = graph()
-	for node in edges:
-		if not shortest_graph.has_node(node):
-			shortest_graph.add_node(node)
-		for neighbor in edges[node]:
-			if not shortest_graph.has_node(neighbor):
-				shortest_graph.add_node(neighbor)
-			if not shortest_graph.has_edge((node, neighbor)):
-				shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
+	shortest_graph = None
+	# shortest_graph = graph()
+	# for node in edges:
+	# 	if not shortest_graph.has_node(node):
+	# 		shortest_graph.add_node(node)
+	# 	for neighbor in edges[node]:
+	# 		if not shortest_graph.has_node(neighbor):
+	# 			shortest_graph.add_node(neighbor)
+	# 		if not shortest_graph.has_edge((node, neighbor)):
+	# 			shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
 
 	return (edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers)
 
-def degree(edges, weights, subscriber_ids, requesters, givers):
+def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 	degrees = {}
 	for node in edges:
 		degrees[node] = sum(weights[node][i] for i in edges[node])
 
+	print len(edges)
+	print len(weights)
+
+	print 'successful'
+	print successful.keys()
+
+	print 'requesters'
+	print requesters
+
+	print 'subscribers'
+	print subscriber_ids.keys()
+
 	succ_degrees = list()
 	unsucc_degrees = list()
 	for requester in requesters:
-		if requester in subscriber_ids:
+		if requester in subscriber_ids and subscriber_ids[requester] in degrees:
 			if requester in successful:
 				succ_degrees.append(degrees[subscriber_ids[requester]])
 			else:
@@ -89,7 +102,7 @@ def degree(edges, weights, subscriber_ids, requesters, givers):
 
 	giver_degrees = list()
 	for giver in givers:
-		if giver in subscriber_ids:
+		if giver in subscriber_ids and subscriber_ids[giver] in degrees:
 			giver_degrees.append(degrees[subscriber_ids[giver]])
 
 	print 'Successful requester average out degree: ', sum(succ_degrees) / float(len(succ_degrees))
