@@ -5,6 +5,8 @@ import sys
 # from pygraph.classes.graph import graph
 # from pygraph.algorithms.minmax import shortest_path
 
+# all_subscribers: list of usernames
+# subscriber_ids: dict of username to # id
 def init():
 	with open ('normalized_combined_comment_counts.txt') as f:
 		edges = collections.defaultdict(lambda: set())
@@ -19,11 +21,16 @@ def init():
 	print 'Loaded comment counts'
 	
 	f = open('pizza_requesters.txt', 'r')
-	f2 = open('pizza_givers.txt', 'r')
 	requesters = dill.load(f)
-	givers = dill.load(f2)
 	f.close()
+
+	f2 = open('pizza_givers.txt', 'r')
+	givers = dill.load(f2)
 	f2.close()
+
+	f3 = open('successful_requests.txt', 'r')
+	successful = dill.load(f3)
+	f3.close()
 	print 'Loaded requesters and givers'
 
 	with open('weights.txt') as f:
@@ -64,12 +71,31 @@ def init():
 			if not shortest_graph.has_edge((node, neighbor)):
 				shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
 
-	return (edges, subscriber_ids, weights, graph, shortest_graph, requesters, givers)
+	return (edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers)
 
-def degree(edges, weights):
+def degree(edges, weights, subscriber_ids, requesters, givers):
 	degrees = {}
 	for node in edges:
 		degrees[node] = sum(weights[node][i] for i in edges[node])
+
+	succ_degrees = list()
+	unsucc_degrees = list()
+	for requester in requesters:
+		if requester in subscriber_ids:
+			if requester in successful:
+				succ_degrees.append(degrees[subscriber_ids[requester]])
+			else:
+				unsucc_degrees.append(degrees[subscriber_ids[requester]])
+
+	giver_degrees = list()
+	for giver in givers:
+		if giver in subscriber_ids:
+			giver_degrees.append(degrees[subscriber_ids[giver]])
+
+	print 'Successful requester average out degree: ', sum(succ_degrees) / float(len(succ_degrees))
+	print 'Unsuccessful requester average out degree: ', sum(unsucc_degrees) / float(len(unsucc_degrees))
+	print 'Giver average out degree: ', sum(giver_degrees) / float(len(giver_degrees))
+
 	f = open('degrees_filtered.txt', 'w')
 	dill.dump(degrees, f)
 	f.close()
@@ -87,11 +113,7 @@ def betweenness_centrality(graph):
 	dill.dump(node_centralities, f)
 	f.close()
 
-def shortest_paths(graph, all_subscribers, requesters, givers):
-	f = open('successful_requests.txt', 'r')
-	successful = dill.load(f3)
-	f.close()
-
+def shortest_paths(graph, all_subscribers, successful, requesters, givers):
 	succ_short_paths = []
 	nosucc_short_paths = []
 	count = 0
@@ -220,19 +242,21 @@ def clusters_to_matrices():
 
 	degrees_vector = list()
 	for i in xrange(len(nodes)):
-		degrees_matrix.append(weights[cluster_nodes[i]])
+		degrees_vector.append(sum(weights_matrix[i]))
+
+	print degrees_vector
 
 	degrees_vector_f = open('coarsening_degrees_vector.txt', 'w')
 	dill.dump(degrees_vector, degrees_vector_f)
 	degrees_vector_f.close()
 
 def main():
-	# edges, subscriber_ids, weights, graph, shortest_graph, requesters, givers = init()
+	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers = init()
 	# coarsening(edges, subscriber_ids, weights, 4000)
-	clusters_to_matrices()
-	# degree(edges, weights)
+	# clusters_to_matrices()
+	degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph)
-	# shortest_paths(shortest_graph, subscriber_ids, requesters, givers)
+	# shortest_paths(shortest_graph, all_subscribers, successful, requesters, givers)
 
 if __name__ == '__main__':
 	main()
