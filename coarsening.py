@@ -1,24 +1,25 @@
 import dill
 import collections
 import sys
-import snap
-# from pygraph.classes.graph import graph
-# from pygraph.algorithms.minmax import shortest_path
+# import snap
+from scipy import io
+from pygraph.classes.graph import graph
+from pygraph.algorithms.minmax import shortest_path
 
 # all_subscribers: list of usernames
 # subscriber_ids: dict of username to # id
 def init():
-	with open ('normalized_combined_comment_counts.txt') as f:
-		edges = collections.defaultdict(lambda: set())
+	edges = collections.defaultdict(lambda: set())
+	# with open ('./data/USE_THIS_comment_counts.txt') as f:
 
-		d = dill.load(f)
-		all_subscribers = sorted(d.keys())
-		subscriber_ids = {}
-		for i in xrange(len(all_subscribers)):
-			subscriber_ids[all_subscribers[i]] = i
+	# 	d = dill.load(f)
+	# 	all_subscribers = sorted(d.keys())
+	# 	subscriber_ids = {}
+	# 	for i in xrange(len(all_subscribers)):
+	# 		subscriber_ids[all_subscribers[i]] = i
 	
-	f.close()
-	print 'Loaded comment counts'
+	# f.close()
+	# print 'Loaded comment counts'
 	
 	f = open('pizza_requesters.txt', 'r')
 	requesters = dill.load(f)
@@ -31,11 +32,20 @@ def init():
 	f3 = open('successful_requests.txt', 'r')
 	successful = dill.load(f3)
 	f3.close()
+
+	subscriber_ids = {}
+	with open('./data/indices.txt') as f:
+		all_subscribers = dill.load(f)
+		for i in xrange(len(all_subscribers)):
+			subscriber_ids[all_subscribers[i]] = i
+	f.close()
+
 	print 'Loaded requesters and givers'
 
-	with open('weights.txt') as f:
-		weights = dill.load(f)
-
+	completed = 0
+	with open('./data/top_weights_sparse.txt.mtx') as f:
+		w = io.mmread(f)
+		weights = w.toarray()
 		for i in xrange(len(weights)):
 			tupled_weights = [(j, weights[i][j]) for j in xrange(len(weights[i]))]
 			sorted_weights = sorted(tupled_weights, key = lambda x: x[1], reverse=True)
@@ -44,35 +54,38 @@ def init():
 				if x[1] != 0 and (all_subscribers[x[0]] in requesters or all_subscribers[x[0]] in givers):
 					edges[i].add(x[0])
 					edges[x[0]].add(i)
+					if all_subscribers[i] in successful and all_subscribers[x[0]] in successful:
+						if successful[all_subscribers[i]] == all_subscribers[x[0]]:
+							completed+=1
 					num += 1
 				if num == 5:
 					break
-
+	print completed
 	f.close()
 	print 'Loaded weights'
 
-	graph = snap.TUNGraph.New()
-	for node in edges:
-		if not graph.IsNode(node):
-			graph.AddNode(node)
-		for neighbor in edges[node]:
-			if not graph.IsNode(neighbor):
-				graph.AddNode(neighbor)
-			if not graph.IsEdge(node, neighbor):
-				graph.AddEdge(node, neighbor)
-
-	shortest_graph = None
-	# shortest_graph = graph()
+	# graph = snap.TUNGraph.New()
 	# for node in edges:
-	# 	if not shortest_graph.has_node(node):
-	# 		shortest_graph.add_node(node)
+	# 	if not graph.IsNode(node):
+	# 		graph.AddNode(node)
 	# 	for neighbor in edges[node]:
-	# 		if not shortest_graph.has_node(neighbor):
-	# 			shortest_graph.add_node(neighbor)
-	# 		if not shortest_graph.has_edge((node, neighbor)):
-	# 			shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
+	# 		if not graph.IsNode(neighbor):
+	# 			graph.AddNode(neighbor)
+	# 		if not graph.IsEdge(node, neighbor):
+	# 			graph.AddEdge(node, neighbor)
 
-	return (edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers)
+	# shortest_graph = None
+	shortest_graph = graph()
+	for node in edges:
+		if not shortest_graph.has_node(node):
+			shortest_graph.add_node(node)
+		for neighbor in edges[node]:
+			if not shortest_graph.has_node(neighbor):
+				shortest_graph.add_node(neighbor)
+			if not shortest_graph.has_edge((node, neighbor)):
+				shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
+
+	return (edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers)
 
 def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 	degrees = {}
@@ -126,21 +139,20 @@ def betweenness_centrality(graph):
 	dill.dump(node_centralities, f)
 	f.close()
 
-def shortest_paths(graph, all_subscribers, successful, requesters, givers):
+def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_subscribers):
 	succ_short_paths = []
 	nosucc_short_paths = []
 	count = 0
 	for requester in requesters:
 		count += 1
 		print count
-		if requester in all_subscribers:
-			if graph.has_node(all_subscribers[requester]):
-				(tree, dists) = shortest_path(graph, all_subscribers[requester])
+		if requester in subscriber_ids:
+			if graph.has_node(subscriber_ids[requester]):
+				(tree, dists) = shortest_path(graph, subscriber_ids[requester])
 				for target, value in dists.items():
-					if requester in all_subscribers and target in all_subscribers and target in givers:
-						requester_id = all_subscribers[requester]
-						giver_id = all_subscribers[giver]
-						if successful[requester_id] == giver_id:
+					if all_subscribers[target] in givers:
+						print 'here'
+						if successful[requester] == all_subscribers[target]:
 							succ_short_paths.append(dists[target])
 						else:
 							nosucc_short_paths.append(dists[target])
@@ -264,12 +276,12 @@ def clusters_to_matrices():
 	degrees_vector_f.close()
 
 def main():
-	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers = init()
+	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers = init()
 	# coarsening(edges, subscriber_ids, weights, 4000)
 	# clusters_to_matrices()
-	degree(edges, weights, subscriber_ids, successful, requesters, givers)
+	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph)
-	# shortest_paths(shortest_graph, all_subscribers, successful, requesters, givers)
+	shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
 
 if __name__ == '__main__':
 	main()
