@@ -4,5 +4,5 @@ comment_counts/.DS_Store
 olddata/**
 coarsening_data/edges_**
 coarsening_data/weights_**
-coarsening_data/clusters_**
+coarsening_data/cluster_**
 coarsening_data/coarsening_combined.txt
