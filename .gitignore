@@ -2,7 +2,6 @@ subreddit_comments/**
 comment_counts/.DS_Store
 .DS_Store
 olddata/**
-weights.txt
 coarsening_weights.txt
 coarsening_edges.txt
 coarsening_clusters.txt

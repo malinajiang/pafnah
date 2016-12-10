@@ -4,8 +4,11 @@ import os
 import math
 import heapq
 import numpy as np
-from scipy import io
+from scipy import io, sparse
 import matlab.engine
+from scipy.sparse import linalg
+from sklearn.cluster import KMeans
+from collections import Counter
 
 W = []
 D = []
@@ -85,7 +88,7 @@ def calcWeightsAndDegrees(counts):
 				w[j] = dot_product(counts[u1], counts[u2])
 		weights.append(w)
 		degrees.append(sum(w))
-	return weights, degrees
+	return users, weights, degrees
 
 def calcTopWeightsAndDegrees(weights):
 	edges = set()
@@ -108,6 +111,62 @@ def calcTopWeightsAndDegrees(weights):
 	for e in edges:
 		degrees[e[0]] += weights[e[0]][e[1]]
 	return (degrees,I,J,V)
+
+#weights should be the full matrix, not just top 5
+def runSRC(weights, dirname):
+	d, I, J, V = calcTopWeightsAndDegrees(weights)
+	print "Calculated top weights and degrees"
+	dump(d, dirname + '/top_degrees.txt')
+	size = len(d)
+	W = sparse.coo_matrix((V, (I, J)), shape=(size, size))
+	D = sparse.coo_matrix((d, (range(size), range(size))), shape=(size, size))
+	L = D - W
+	print "Calculated W, D, L"
+	io.mmwrite(dirname + '/top_weights_sparse.txt', W)
+	io.mmwrite(dirname + '/top_degrees_sparse.txt', D)
+	io.mmwrite(dirname + '/top_lagrangian_sparse.txt', L)
+	vals, vecs = linalg.eigsh(L, k=size-1)
+	print "Calculated eigenvals/vecs"
+	# okay do I want to confirm that vals is sorted in increasing order or just assume
+	npsave(vals, dirname + '/top_vals.txt')
+	npsave(vecs, dirname + '/top_vecs.txt')
+	#nclusters = [2,3,4,5,6,7,8,9,10,11,13,16,20,25,31,38,46,55,65,76,88,101,115,130,146,163,181,200,220,241,263,286,310,335,361,388,416,445,475,506,538,571,605,640,676,713,751,790,830,871,913,956,1000]
+	nclusters = [2,3,4,5,6,7,8,9,10,12,14,16,18,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,110,120,130,140,150,160,170,180,190,200,225,250,275,300,325,350,375,400,425,450,475,500,550,600,650,700,800,900,1000]
+	counters = []
+	kmeans = []
+	for n in nclusters:
+		kmean = KMeans(n_clusters=n, random_state=0).fit(vecs[:,0:n])
+		kmeans.append(kmean)
+		label = kmean.labels_.tolist()
+		c = Counter(label)
+		counters.append(c)
+		topclusters = sorted([c[k] for k in c if c[k] > 16], reverse=True)
+		print n, "clusters:", topclusters
+	dump(counters, dirname + '/top_km_counters.txt')
+	dump(kmeans, dirname + '/top_km.txt')
+	return (d,I,J,V,W,D,L,vals,vecs,counters,kmeans)
+
+def dump(data, fname):
+	f = open(fname, 'w')
+	dill.dump(data, f)
+	f.close()
+
+def load(fname):
+	f = open(fname, 'r')
+	data = dill.load(f)
+	f.close()
+	return data
+
+def npsave(data, fname):
+	f = open(fname, 'w')
+	np.save(f, data)
+	f.close()
+
+def npload(fname):
+	f = open(fname, 'r')
+	data = np.load(f)
+	f.close()
+	return data
 
 def runSpectralRatioCut():
 	# e_val, e_vec = linalg.eig(L)
