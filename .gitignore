@@ -6,3 +6,9 @@ coarsening_data/edges_**
 coarsening_data/weights_**
 coarsening_data/cluster_**
 coarsening_data/coarsening_combined.txt
+data/top_vecs.txt
+data/weights.txt
+modularity/top_degrees.txt
+modularity/top_lagrangian.txt
+modularity/top_vecs.txt
+modularity/top_weights.txt
