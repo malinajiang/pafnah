@@ -20,6 +20,8 @@ Use dill for:
 		weight matrix
 	degrees.txt
 		degree vector.
+	neighbors.txt
+		A list where the i-th element is a dict of node i's neighbors to edge weight.
 	top_degrees.txt
 		degree vector after sparsifying.
 	km_counters.txt
