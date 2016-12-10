@@ -1,32 +1,39 @@
-normalized_final_comment_counts.txt
-Use dill. Dict from user to dict of subreddit to comment count. Contains only users in Jurafsky dataset.
+Use the following command when files are too big:
+	split -b 99000000 FILENAME.txt xFILENAME
+To put it back together, use
+	cat xFILENAME* > FILENAME.txt
 
-In the data directory - everything based on nonzero_counts.txt
-use dill for:
+normalized_jurafsky_comment_counts.txt
+	Use dill. Dict from user to dict of subreddit to comment count. Contains only users in Jurafsky dataset.
+normalized_poster_comment_counts.txt
+	Use dill. Contains all users who have posted to RAOP.
+normalized_giver_comment_counts.txt
+	Use dill. Contains all givers from Jurafsky dataset.
+
+In the data directory
+	USE_THIS_comment_counts.txt
+		Jurafsky users with data-less users filtered out. Normalized comment counts.
+Use dill for:
 	indices.txt
-		sorted list of users in normalized_final_comment_counts.
+		sorted list of users in weights.txt
 	weights.txt
 		weight matrix
 	degrees.txt
-		degree vector
-	nonzero_counts.txt
-		normalized_final_comments_counts with data-less users filtered out.
+		degree vector.
+	neighbors.txt
+		A list where the i-th element is a dict of node i's neighbors to edge weight.
 	top_degrees.txt
 		degree vector after sparsifying.
+	km_counters.txt
+		list of counters from kmeans
+	km_kmeans.txt
+		kmeans objects for top_vecs.txt
+
+use numpy for
 	top_vals.txt
 		sorted eigenvalues for top_lagrangian_sparse.txt
 	top_vecs.txt
 		eigenvectors for top_lagrangian_sparse.txt corresponding to top_vals.txt
-	km_centers1,2.txt
-		list of cluster centers from kmeans
-	km_num_clusters.txt
-		list of number of clusters at each index for kmeans
-	km_counters.txt
-		list of counters from kmeans
-	km_labels.txt
-		list of labels from kmeans
-	km_kmeans1,2.txt
-		kmeans objects for top_vecs.txt
 
 use scipy.io for:
 	top_weights_sparse.txt

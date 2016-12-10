@@ -2,10 +2,7 @@ subreddit_comments/**
 comment_counts/.DS_Store
 .DS_Store
 olddata/**
-weights.txt
-coarsening_weights.txt
-coarsening_edges.txt
-coarsening_clusters.txt
-coarsening_weights_matrix.txt
-coarsening_degrees_matrix.txt
-coarsening_degrees_matrix.tar.gz
+coarsening_data/edges_**
+coarsening_data/weights_**
+coarsening_data/clusters_**
+coarsening_data/coarsening_combined.txt
