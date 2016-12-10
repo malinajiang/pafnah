@@ -93,6 +93,7 @@ def calcWeightsAndDegrees(counts):
 def calcTopWeightsAndDegrees(weights):
 	edges = set()
 	degrees = [0]*len(weights)
+	neighbors = [{} for i in range(len(weights))]
 	for u, uw in enumerate(weights):
 		suw = [(uw[i], i) for i in range(len(uw))]
 		top = heapq.nlargest(5, suw)
@@ -101,6 +102,8 @@ def calcTopWeightsAndDegrees(weights):
 			if e[0] > 0:
 				edges.add((u, e[1]))
 				edges.add((e[1], u))
+				neighbors[u][e[1]] = weights[u][e[1]]
+				neighbors[e[1]][u] = weights[e[1]][u]
 	I = []
 	J = []
 	V = []
@@ -110,7 +113,7 @@ def calcTopWeightsAndDegrees(weights):
 		V.append(weights[e[0]][e[1]])
 	for e in edges:
 		degrees[e[0]] += weights[e[0]][e[1]]
-	return (degrees,I,J,V)
+	return (degrees,I,J,V, neighbors)
 
 #weights should be the full matrix, not just top 5
 def runSRC(weights, dirname):

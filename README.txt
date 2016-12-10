@@ -1,5 +1,14 @@
-normalized_final_comment_counts.txt
-Use dill. Dict from user to dict of subreddit to comment count. Contains only users in Jurafsky dataset.
+Use the following command when files are too big:
+	split -b 99000000 FILENAME.txt xFILENAME
+To put it back together, use
+	cat xFILENAME* > FILENAME.txt
+
+normalized_jurafsky_comment_counts.txt
+	Use dill. Dict from user to dict of subreddit to comment count. Contains only users in Jurafsky dataset.
+normalized_poster_comment_counts.txt
+	Use dill. Contains all users who have posted to RAOP.
+normalized_giver_comment_counts.txt
+	Use dill. Contains all givers from Jurafsky dataset.
 
 In the data directory
 	USE_THIS_comment_counts.txt
@@ -11,6 +20,8 @@ Use dill for:
 		weight matrix
 	degrees.txt
 		degree vector.
+	neighbors.txt
+		A list where the i-th element is a dict of node i's neighbors to edge weight.
 	top_degrees.txt
 		degree vector after sparsifying.
 	km_counters.txt
