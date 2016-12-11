@@ -4,6 +4,7 @@ import sys
 import snap
 from scipy import io
 from scipy.stats import ttest_ind
+from scipy.cluster.vq import kmeans,vq
 import random
 from pygraph.classes.graph import graph
 from pygraph.algorithms.minmax import shortest_path
@@ -47,6 +48,7 @@ def init():
 	with open('./data/top_weights_sparse.txt.mtx') as f:
 		w = io.mmread(f)
 		weights = w.toarray()
+
 		for i in xrange(len(weights)):
 			tupled_weights = [(j, weights[i][j]) for j in xrange(len(weights[i]))]
 			sorted_weights = sorted(tupled_weights, key = lambda x: x[1], reverse=True)
@@ -61,7 +63,6 @@ def init():
 					num += 1
 				if num == 5:
 					break
-
 	f.close()
 	print 'Loaded weights'
 
@@ -239,10 +240,13 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 	unsucc_short_paths = []
 	giver_short_paths = []
 
+	shortest_paths = dict()
+
 	for requester in requesters:
 		if requester in subscriber_ids:
 			if graph.has_node(subscriber_ids[requester]):
 				(tree, dists) = shortest_path(graph, subscriber_ids[requester])
+				avg_shorted_path = list()
 				for target, value in dists.items():
 					if all_subscribers[target] in givers:
 						if requester in successful:
@@ -250,12 +254,16 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 						else:
 							unsucc_short_paths.append(dists[target])
 
+						avg_shorted_path.append(dists[target])
+				
+				shortest_paths[requester] = sum(avg_shorted_path) / float(len(avg_shorted_path))
+
 	for giver in givers:
 		if giver in subscriber_ids:
 			if graph.has_node(subscriber_ids[giver]):
 				(trees, dist) = shortest_path(graph, subscriber_ids[giver])
 				for target, value in dists.items():
-					if all_subscribers[target] in requesters or all_subscribers[target] in givers:
+					if all_subscribers[target] in givers:
 						giver_short_paths.append(dists[target])
 
 	t, p = ttest_ind(succ_short_paths, unsucc_short_paths, equal_var=False)
@@ -271,10 +279,19 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 	print "Unsuccessful shortest paths: ", sum(unsucc_short_paths) / float(len(unsucc_short_paths))
 	print "Giver shortest paths: ", sum(giver_short_paths) / float(len(giver_short_paths))
 
+	f = open('shortest_paths.txt', 'w')
+	dill.dump(shortest_paths, f)
+	f.close()
+
 def coarsening(edges, subscriber_ids, weights, num_clusters):
 	weights = weights.tolist()
-	clusters = collections.defaultdict(lambda: set())
+	clusters = dict()
 	iteration = 0
+
+	for node in edges.keys():
+		cluster = set()
+		cluster.add(node)
+		clusters[node] = cluster
 
 	prev_nodes = 2 * len(edges)
 	while len(edges) > num_clusters:
@@ -285,18 +302,17 @@ def coarsening(edges, subscriber_ids, weights, num_clusters):
 		else:
 			prev_nodes = num_nodes
 
-		nodes = edges.keys()
+		nodes = clusters.keys()
 		random.shuffle(nodes)
 
 		matched = set()
-
-		print num_nodes
-
 		counter = 0
-
 		for node in nodes:
 			counter += 1
 			print "Node: " + str(counter) + '/' + str(num_nodes)
+
+			if node not in clusters:
+				continue
 
 			if node in matched:
 				continue
@@ -306,19 +322,17 @@ def coarsening(edges, subscriber_ids, weights, num_clusters):
 
 			for i in xrange(len(sorted_weights)):
 				max_neighbor = weights[node].index(sorted_weights[i])
-				if max_neighbor not in edges[node]:
+				if max_neighbor not in edges[node] or max_neighbor not in clusters:
 					continue
-				if max_neighbor not in matched and sorted_weights[i] > 0:
+				if max_neighbor not in matched and max_neighbor != node and sorted_weights[i] > 0:
 					no_match = False
 					break
 
 			if no_match:
 				continue
 
-			clusters[node].add(max_neighbor)
-			if max_neighbor in clusters:
-				clusters[node] = clusters[node].union(clusters[max_neighbor])
-				clusters.pop(max_neighbor)
+			clusters[node] = clusters[node].union(clusters[max_neighbor])
+			clusters.pop(max_neighbor)
 			
 			matched.add(node)
 			matched.add(max_neighbor)
@@ -345,28 +359,32 @@ def coarsening(edges, subscriber_ids, weights, num_clusters):
 		clusters_f.close()
 
 		iteration += 1
-		
 
-	print clusters
 	f = open('coarsening_combined.txt', 'w')
 	dill.dump(clusters, f)
 	f.close()
 
 def clusters_to_matrices():
-	edges_f = open('coarsening_data/edges_11.txt', 'r')
+	edges_f = open('coarsening_data_new/edges_5.txt', 'r')
 	edges = dill.load(edges_f)
 	edges_f.close()
 	print 'Loaded coarsening edges'
 
-	weights_f = open('coarsening_data/weights_11.txt', 'r')
+	weights_f = open('coarsening_data_new/weights_5.txt', 'r')
 	weights = dill.load(weights_f)
 	weights_f.close()
 	print 'Loaded coarsening weights'
 
-	clusters_f = open('coarsening_data/clusters_11.txt', 'r')
+	clusters_f = open('coarsening_data_new/clusters_5.txt', 'r')
 	clusters = dill.load(clusters_f)
 	clusters_f.close()
 	print 'Loaded coarsening clusters'
+
+	count = 0
+	total_nodes = set()
+	for x in clusters:
+		count += len(clusters[x])
+		total_nodes = total_nodes.union(clusters[x])
 
 	cluster_nodes = dict()
 	nodes = sorted(clusters.keys())
@@ -391,7 +409,7 @@ def clusters_to_matrices():
 	dill.dump(degrees_vector, degrees_vector_f)
 	degrees_vector_f.close()
 
-def assign_clusters():
+def uncoarsening():
 	f = open('coarsening_data/top_km.txt', 'r')
 	top_km = dill.load(f)
 	f.close()
@@ -400,14 +418,40 @@ def assign_clusters():
 	top_km_counters = dill.load(f2)
 	f2.close()
 
-	print top_km
-	print top_km_counters
+	clusters_f = open('coarsening_data/clusters_11.txt', 'r')
+	clusters = dill.load(clusters_f)
+	clusters_f.close()
+	print 'Loaded coarsening clusters'
+
+	uncoarsened_clusters = list()
+
+	total = 0
+	for x in clusters:
+		total += len(clusters[x]) + 1
+
+	print total
+
+	# nodes = sorted(clusters.keys())
+	# for i in xrange(len(top_km)):
+	# 	assignment = top_km[i].labels_
+	# 	kmeans_cluster = [0] * 
+
+	# 	for j in xrange(len(nodes)):
+	# 		kmeans_cluster.
+
+		
+
+
+	# print [(i, top_km[i].n_clusters) for i in xrange(len(top_km))]
+	# print top_km_counters
+
+	print top_km[21].labels_
 
 def main():
 	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers = init()
 	# coarsening(edges, subscriber_ids, weights, 500)
-	# clusters_to_matrices()
-	assign_clusters()
+	clusters_to_matrices()
+	# uncoarsening()
 	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph, all_subscribers, successful, requesters, givers)
 	# shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)

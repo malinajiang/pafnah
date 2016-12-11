@@ -21,24 +21,36 @@ def read_dataset():
     f = open('degrees_filtered.txt', 'r')
     degrees = dill.load(f)
     f.close()
+
     f2 = open('betweenness_centrality_filtered.txt', 'r')
     between = dill.load(f2)
     f2.close()
+
     f3 = open('successful_requests.txt', 'r')
     successful = dill.load(f3)
     f3.close()
+
     f4 = open('pizza_requesters.txt', 'r')
     requesters = dill.load(f4)
     f4.close()
+
     f5 = open('./data/indices.txt','r')
     indices = dill.load(f5)
     f5.close()
+    f6 = open('shortest_paths.txt', 'r')
+    shorts = dill.load(f6)
+    f6.close()
+
+    f6 = open('shortest_paths.txt', 'r')
+    shorts = dill.load(f6)
+    f6.close()
 
     for k, v in degrees.items():
         if indices[k] in requesters:
             features = {}
             features['degree'] = v
-            features['betweenness'] = between[k]
+            features['between'] = between[k]
+            features['short'] = shorts[indices[k]]
             train[k] = features
             dev[k] = features
 
@@ -53,8 +65,8 @@ def extract_features(ID, request, success, indices):
 
     # Existence in top 10 subreddits
     feature_vector['degree'] = request['degree']
-    feature_vector['between'] = request['degree']
-    
+    feature_vector['between'] = request['between']
+    feature_vector['short'] = request['short']
 
     # request received pizza 
     success = 1 if indices[ID] in success else -1
@@ -68,10 +80,10 @@ def learn_predictor(evaluate):
     num_iters = 500
 
     for t in range(num_iters):
-        eta = .0000001 # .0000001
+        eta = .0000000000001 # .0000001
         for ID, features in train_data.items():
             feature_vector, success = extract_features(ID, features, successful, indices)
-            dotProd = (dot_product(feature_vector, weights))*success
+            dotProd = (dot_product(feature_vector, weights)) * success
             if dotProd < 1:
                 increment(weights, eta * success, feature_vector)
 
@@ -85,7 +97,9 @@ def learn_predictor(evaluate):
         for ID, features in dev_data.items():
             feature_vector, success = extract_features(ID, features, successful, indices)
             score = dot_product(weights, feature_vector)
-            if abs(success - score) <= 0.5: correct += 1
+            if abs(success - score) <= 0.5: 
+                correct += 1
+           
             r = random.randint(0,1)
             if r == 1 and success == 1:
                 rando += 1
@@ -100,8 +114,8 @@ def learn_predictor(evaluate):
     return weights
 
 
-def main(argv):
+def main():
     learn_predictor(True)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()

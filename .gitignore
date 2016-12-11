@@ -4,8 +4,12 @@ comment_counts/.DS_Store
 olddata/**
 coarsening_data/edges_**
 coarsening_data/weights_**
-coarsening_data/cluster_**
+coarsening_data/clusters_**
 coarsening_data/coarsening_combined.txt
+coarsening_data_new/edges_**
+coarsening_data_new/weights_**
+coarsening_data_new/clusters_**
+coarsening_data_new/coarsening_combined.txt
 data/top_vecs.txt
 data/weights.txt
 modularity/top_degrees.txt
