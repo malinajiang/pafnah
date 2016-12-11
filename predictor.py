@@ -33,12 +33,16 @@ def read_dataset():
     f5 = open('./data/indices.txt','r')
     indices = dill.load(f5)
     f5.close()
+    f6 = open('shortest_paths.txt', 'r')
+    shorts = dill.load(f6)
+    f6.close()
 
     for k, v in degrees.items():
         if indices[k] in requesters:
             features = {}
             features['degree'] = v
-            features['betweenness'] = between[k]
+            features['between'] = between[k]
+            features['short'] = shorts[indices[k]]
             train[k] = features
             dev[k] = features
 
@@ -53,8 +57,8 @@ def extract_features(ID, request, success, indices):
 
     # Existence in top 10 subreddits
     feature_vector['degree'] = request['degree']
-    feature_vector['between'] = request['degree']
-    
+    feature_vector['between'] = request['between']
+    feature_vector['short'] = request['short']
 
     # request received pizza 
     success = 1 if indices[ID] in success else -1
@@ -68,7 +72,7 @@ def learn_predictor(evaluate):
     num_iters = 500
 
     for t in range(num_iters):
-        eta = .0000001 # .0000001
+        eta = .0000000000001 # .0000001
         for ID, features in train_data.items():
             feature_vector, success = extract_features(ID, features, successful, indices)
             dotProd = (dot_product(feature_vector, weights))*success
@@ -100,8 +104,8 @@ def learn_predictor(evaluate):
     return weights
 
 
-def main(argv):
+def main():
     learn_predictor(True)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
