@@ -6,7 +6,8 @@ import heapq
 import numpy as np
 from scipy import io, sparse
 import matlab.engine
-from scipy.sparse import linalg
+from scipy.sparse import linalg as slinalg
+from scipy import linalg
 from sklearn.cluster import KMeans
 from collections import Counter
 
@@ -128,7 +129,7 @@ def runSRC(weights, dirname):
 	io.mmwrite(dirname + '/top_weights_sparse.txt', W)
 	io.mmwrite(dirname + '/top_degrees_sparse.txt', D)
 	io.mmwrite(dirname + '/top_lagrangian_sparse.txt', L)
-	vals, vecs = linalg.eigsh(L, k=size-1)
+	vals, vecs = slinalg.eigsh(L, k=size-1)
 	print "Calculated eigenvals/vecs"
 	# okay do I want to confirm that vals is sorted in increasing order or just assume
 	npsave(vals, dirname + '/top_vals.txt')
@@ -148,6 +149,26 @@ def runSRC(weights, dirname):
 	dump(counters, dirname + '/top_km_counters.txt')
 	dump(kmeans, dirname + '/top_km.txt')
 	return (d,I,J,V,W,D,L,vals,vecs,counters,kmeans)
+
+def runMMSRC(nQL, dirname, topn):
+	qvals, qvecs = linalg.eigh(nQL)
+	npsave(qvals, dirname + '/top_vals.txt')
+	npsave(qvecs, dirname + '/top_vecs.txt')
+	nclusters = [2,3,4,5,6,7,8,9,10,12,14,16,18,20,25,30,35,40,45,50,55,60,65,70,75,80,85,90,95,100,110,120,130,140,150,160,170,180,190,200,225,250,275,300,325,350,375,400,425,450,475,500,550,600,650,700,800,900,1000]
+	counters = []
+	kmeans = []
+	for n in nclusters:
+		if n <= topn:
+			kmean = KMeans(n_clusters=n, random_state=0).fit(qvecs[:,0:n])
+			kmeans.append(kmean)
+			label = kmean.labels_.tolist()
+			c = Counter(label)
+			counters.append(c)
+			topclusters = sorted([c[k] for k in c if c[k] > 16], reverse=True)
+			print n, "clusters:", topclusters
+	dump(counters, dirname + '/top_km_counters.txt')
+	dump(kmeans, dirname + '/top_km.txt')
+	return (qvals, qvecs, counters, kmeans)
 
 def dump(data, fname):
 	f = open(fname, 'w')

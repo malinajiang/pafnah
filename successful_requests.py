@@ -28,7 +28,8 @@ def get_successful_requests(dataset):
           edited[requester] = edited_text
           number_edited += 1
 
-    successful_requests[requester] = giver
+      else:
+        successful_requests[requester] = giver
 
   successful_requests_file = open('successful_requests.txt', 'wb')
   pickle.dump(successful_requests, successful_requests_file)
