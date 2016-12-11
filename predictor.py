@@ -37,10 +37,7 @@ def read_dataset():
     f5 = open('./data/indices.txt','r')
     indices = dill.load(f5)
     f5.close()
-    f6 = open('shortest_paths.txt', 'r')
-    shorts = dill.load(f6)
-    f6.close()
-
+    
     f6 = open('shortest_paths.txt', 'r')
     shorts = dill.load(f6)
     f6.close()

@@ -454,7 +454,7 @@ def main():
 	# uncoarsening()
 	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph, all_subscribers, successful, requesters, givers)
-	# shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
+	shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
 
 if __name__ == '__main__':
 	main()
