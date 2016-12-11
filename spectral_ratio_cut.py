@@ -164,11 +164,89 @@ def runMMSRC(nQL, dirname, topn):
 			label = kmean.labels_.tolist()
 			c = Counter(label)
 			counters.append(c)
-			topclusters = sorted([c[k] for k in c if c[k] > 16], reverse=True)
+			topclusters = sorted([c[k] for k in c], reverse=True)
+			if len(topclusters) > 30:
+			  topclusters = topclusters[:30]
 			print n, "clusters:", topclusters
 	dump(counters, dirname + '/top_km_counters.txt')
 	dump(kmeans, dirname + '/top_km.txt')
 	return (qvals, qvecs, counters, kmeans)
+
+def countMatches(kmeans):
+  matches = []  
+  for kmean in kmeans:
+    label = kmean.labels_
+    ctr = Counter(label.tolist())
+    gctr = Counter()
+    for g in gi:
+      gctr[label[g]] += 1
+    count = 0
+    expe = 0
+    gcount = 0
+    gprop = []
+    for succ in su:
+      if label[succ] == label[su[succ]]:
+        count += 1
+      expe += (ctr[label[succ]] - 1) / 3931.0
+      gcount += gctr[label[succ]]
+      if ctr[label[succ]] > 1:
+        gprop.append(gctr[label[succ]] / (ctr[label[succ]]-1.0))
+    fexpe = 0
+    fgcount = 0
+    fgprop = []
+    for fail in fa:
+      fexpe += (ctr[label[fail]] - 1) / 3931.0
+      fgcount += gctr[label[fail]]
+      if ctr[label[fail]] > 1:
+        fgprop.append(gctr[label[fail]] / (ctr[label[fail]]-1))
+    tt, pp = ttest_ind(gprop, fgprop, equal_var=False)
+    count /= 326.0
+    expe /= 326.0
+    gcount /= 326.0
+    fgcount /= 3224.0
+    fexpe /= 3224.0
+    rat = gcount / fgcount
+    print kmean.n_clusters, count, expe, gcount, fexpe, fgcount, tt, pp, rat
+    matches.append((kmean.n_clusters, count, expe, gcount, fexpe, fgcount, gprop, fgprop, tt, pp, rat))
+  return matches
+
+def countUncoarsenedMatches(uckmeans):
+  matches = []  
+  for kmean in uckmeans:
+    label = kmean[1]
+    ctr = Counter(label)
+    gctr = Counter()
+    for g in gi:
+      gctr[label[g]] += 1
+    count = 0
+    expe = 0
+    gcount = 0
+    gprop = []
+    for succ in su:
+      if label[succ] == label[su[succ]]:
+        count += 1
+      expe += (ctr[label[succ]] - 1) / 3931.0
+      gcount += gctr[label[succ]]
+      if ctr[label[succ]] > 1:
+        gprop.append(gctr[label[succ]] / (ctr[label[succ]]-1.0))
+    fexpe = 0
+    fgcount = 0
+    fgprop = []
+    for fail in fa:
+      fexpe += (ctr[label[fail]] - 1) / 3931.0
+      fgcount += gctr[label[fail]]
+      if ctr[label[fail]] > 1:
+        fgprop.append(gctr[label[fail]] / (ctr[label[fail]]-1))
+    tt, pp = ttest_ind(gprop, fgprop, equal_var=False)
+    count /= 326.0
+    expe /= 326.0
+    gcount /= 326.0
+    fgcount /= 3224.0
+    fexpe /= 3224.0
+    rat = gcount / fgcount
+    print kmean[0], count, expe, gcount, fexpe, fgcount, tt, pp, rat
+    matches.append((kmean[0], count, expe, gcount, fexpe, fgcount, gprop, fgprop, tt, pp, rat))
+  return matches
 
 def dump(data, fname):
 	f = open(fname, 'w')
