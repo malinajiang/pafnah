@@ -239,10 +239,13 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 	unsucc_short_paths = []
 	giver_short_paths = []
 
+	shortest_paths = dict()
+
 	for requester in requesters:
 		if requester in subscriber_ids:
 			if graph.has_node(subscriber_ids[requester]):
 				(tree, dists) = shortest_path(graph, subscriber_ids[requester])
+				avg_shorted_path = list()
 				for target, value in dists.items():
 					if all_subscribers[target] in givers:
 						if requester in successful:
@@ -250,12 +253,16 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 						else:
 							unsucc_short_paths.append(dists[target])
 
+						avg_shorted_path.append(dists[target])
+				
+				shortest_paths[requester] = sum(avg_shorted_path) / float(len(avg_shorted_path))
+
 	for giver in givers:
 		if giver in subscriber_ids:
 			if graph.has_node(subscriber_ids[giver]):
 				(trees, dist) = shortest_path(graph, subscriber_ids[giver])
 				for target, value in dists.items():
-					if all_subscribers[target] in requesters or all_subscribers[target] in givers:
+					if all_subscribers[target] in givers:
 						giver_short_paths.append(dists[target])
 
 	t, p = ttest_ind(succ_short_paths, unsucc_short_paths, equal_var=False)
@@ -270,6 +277,10 @@ def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_su
 	print "Successful shortest paths: ", sum(succ_short_paths) / float(len(succ_short_paths))
 	print "Unsuccessful shortest paths: ", sum(unsucc_short_paths) / float(len(unsucc_short_paths))
 	print "Giver shortest paths: ", sum(giver_short_paths) / float(len(giver_short_paths))
+
+	f = open('shortest_paths.txt', 'w')
+	dill.dump(shortest_paths, f)
+	f.close()
 
 def coarsening(edges, subscriber_ids, weights, num_clusters):
 	weights = weights.tolist()
@@ -407,10 +418,10 @@ def main():
 	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers = init()
 	# coarsening(edges, subscriber_ids, weights, 500)
 	# clusters_to_matrices()
-	assign_clusters()
+	# assign_clusters()
 	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph, all_subscribers, successful, requesters, givers)
-	# shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
+	shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
 
 if __name__ == '__main__':
 	main()
