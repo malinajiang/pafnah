@@ -3,9 +3,10 @@ import collections
 import sys
 import snap
 from scipy import io
+from scipy.stats import ttest_ind
 import random
-# from pygraph.classes.graph import graph
-# from pygraph.algorithms.minmax import shortest_path
+from pygraph.classes.graph import graph
+from pygraph.algorithms.minmax import shortest_path
 
 # all_subscribers: list of usernames
 # subscriber_ids: dict of username to # id
@@ -43,7 +44,6 @@ def init():
 
 	print 'Loaded requesters and givers'
 
-	completed = 0
 	with open('./data/top_weights_sparse.txt.mtx') as f:
 		w = io.mmread(f)
 		weights = w.toarray()
@@ -61,36 +61,35 @@ def init():
 					num += 1
 				if num == 5:
 					break
-	print completed
+
 	f.close()
 	print 'Loaded weights'
 
-	graph = snap.TUNGraph.New()
+	snap_graph = snap.TUNGraph.New()
 	for node in edges:
-		if not graph.IsNode(node):
-			graph.AddNode(node)
+		if not snap_graph.IsNode(node):
+			snap_graph.AddNode(node)
 		for neighbor in edges[node]:
-			if not graph.IsNode(neighbor):
-				graph.AddNode(neighbor)
-			if not graph.IsEdge(node, neighbor):
-				graph.AddEdge(node, neighbor)
+			if not snap_graph.IsNode(neighbor):
+				snap_graph.AddNode(neighbor)
+			if not snap_graph.IsEdge(node, neighbor):
+				snap_graph.AddEdge(node, neighbor)
 
-	shortest_graph = None
-	# shortest_graph = graph()
-	# for node in edges:
-	# 	if not shortest_graph.has_node(node):
-	# 		shortest_graph.add_node(node)
-	# 	for neighbor in edges[node]:
-	# 		if not shortest_graph.has_node(neighbor):
-	# 			shortest_graph.add_node(neighbor)
-	# 		if not shortest_graph.has_edge((node, neighbor)):
-	# 			shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
+	# shortest_graph = None
+	shortest_graph = graph()
+	for node in edges:
+		if not shortest_graph.has_node(node):
+			shortest_graph.add_node(node)
+		for neighbor in edges[node]:
+			if not shortest_graph.has_node(neighbor):
+				shortest_graph.add_node(neighbor)
+			if not shortest_graph.has_edge((node, neighbor)):
+				shortest_graph.add_edge((node, neighbor), wt = weights[node][neighbor])
 
-	return (edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers)
+	return (edges, subscriber_ids, weights, snap_graph, shortest_graph, successful, requesters, givers, all_subscribers)
 
 def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 	weights = weights.tolist()
-	print weights
 
 	degrees = {}
 	for node in edges:
@@ -118,9 +117,28 @@ def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 			giver_degrees.append(degrees[subscriber_ids[giver]])
 			giver_weights.extend([x for x in weights[subscriber_ids[giver]] if x > 0])
 
+
+	t, p = ttest_ind(succ_degrees, unsucc_degrees, equal_var=False)
+	print 'Successful vs. unsuccessful degrees: ', t, p
+
+	t, p = ttest_ind(succ_degrees, giver_degrees, equal_var=False)
+	print 'Successful vs. giver degrees: ', t, p
+
+	t, p = ttest_ind(unsucc_degrees, giver_degrees, equal_var=False)
+	print 'Unsuccessful vs. giver degrees: ', t, p
+
 	print 'Successful requester average out degree: ', sum(succ_degrees) / float(len(succ_degrees))
 	print 'Unsuccessful requester average out degree: ', sum(unsucc_degrees) / float(len(unsucc_degrees))
 	print 'Giver average out degree: ', sum(giver_degrees) / float(len(giver_degrees))
+
+	t, p = ttest_ind(succ_weights, unsucc_weights, equal_var=False)
+	print 'Successful vs. unsuccessful weights: ', t, p
+
+	t, p = ttest_ind(succ_weights, giver_weights, equal_var=False)
+	print 'Successful vs. giver weights: ', t, p
+
+	t, p = ttest_ind(unsucc_weights, giver_weights, equal_var=False)
+	print 'Unsuccessful vs. giver weights: ', t, p		
 
 	print 'Successful requester average weight: ', sum(succ_weights) / float(len(succ_weights))
 	print 'Unsuccessful requester average weight: ', sum(unsucc_weights) / float(len(unsucc_weights))
@@ -132,17 +150,7 @@ def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 	unsucc_unsucc_weights = list()
 	unsucc_giver_weights = list()
 	giver_giver_weights = list()
-
-	print len(all_users)
-	print len(requesters)
-	print len(givers)
-	print len(successful)
-	print len(subscriber_ids)
-	print len(weights)
-
-	print sum([1 for x in subscriber_ids if x in requesters])
-	print sum([1 for x in subscriber_ids if x in givers])
-
+	requester_giver_weights = list()
 
 	for u1 in all_users:
 		for u2 in all_users:
@@ -151,18 +159,29 @@ def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 
 			if u1 in successful and u2 in successful:
 				succ_succ_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
-			elif u1 in successful and u2 not in successful:
+			elif u1 in successful and u2 not in successful and u2 not in givers:
 				succ_unsucc_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
 			elif u1 in successful and u2 in givers:
 				succ_giver_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
-			elif u1 not in successful and u2 not in successful:
+			elif u1 not in successful and u2 not in successful and u2 not in givers:
 				unsucc_unsucc_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
-			elif u1 not in successful and u2 in givers:
+			elif u1 not in successful and u1 not in givers and u2 in givers:
 				unsucc_giver_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
 			elif u1 in givers and u2 in givers:
 				giver_giver_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
 			else:
 				continue
+
+			if u1 in successful and u2 == successful[u1]:
+				requester_giver_weights.append(weights[subscriber_ids[u1]][subscriber_ids[u2]])
+
+	succ_succ_weights = [x for x in succ_succ_weights if x > 0]
+	succ_unsucc_weights = [x for x in succ_unsucc_weights if x > 0]
+	succ_giver_weights = [x for x in succ_giver_weights if x > 0]
+	unsucc_unsucc_weights = [x for x in unsucc_unsucc_weights if x > 0]
+	unsucc_giver_weights = [x for x in unsucc_giver_weights if x > 0]
+	giver_giver_weights = [x for x in giver_giver_weights if x > 0]
+	requester_giver_weights = [x for x in requester_giver_weights if x > 0]
 
 	print 'Successful-successful average weight: ', sum(succ_succ_weights) / float(len(succ_succ_weights))
 	print 'Successful-unsuccessful average weight: ', sum(succ_unsucc_weights) / float(len(succ_unsucc_weights))
@@ -170,6 +189,7 @@ def degree(edges, weights, subscriber_ids, successful, requesters, givers):
 	print 'Unsuccessful-unsuccessful average weight: ', sum(unsucc_unsucc_weights) / float(len(unsucc_unsucc_weights))
 	print 'Unsuccessful-giver average weight: ', sum(unsucc_giver_weights) / float(len(unsucc_giver_weights))
 	print 'Giver-giver average weight: ', sum(giver_giver_weights) / float(len(giver_giver_weights))
+	print 'Requester-giver average weight: ', sum(requester_giver_weights) / float(len(requester_giver_weights))
 
 	f = open('degrees_filtered.txt', 'w')
 	dill.dump(degrees, f)
@@ -197,6 +217,15 @@ def betweenness_centrality(graph, all_subscribers, successful, requesters, giver
 
 		node_centralities[node] = Nodes[node]
 
+	t, p = ttest_ind(succ_btwn, unsucc_btwn, equal_var=False)
+	print 'Successful vs. unsuccessful betweenness: ', t, p
+
+	t, p = ttest_ind(succ_btwn, giver_btwn, equal_var=False)
+	print 'Successful vs. giver betweenness: ', t, p
+
+	t, p = ttest_ind(unsucc_btwn, giver_btwn, equal_var=False)
+	print 'Unsuccessful vs. giver betweenness: ', t, p	
+
 	print 'Successful requester average betweenness centrality: ', sum(succ_btwn) / float(len(succ_btwn))
 	print 'Unsuccessful requester average betweenness centrality: ', sum(unsucc_btwn) / float(len(unsucc_btwn))
 	print 'Giver average betweenness centrality: ', sum(giver_btwn) / float(len(giver_btwn))
@@ -207,24 +236,40 @@ def betweenness_centrality(graph, all_subscribers, successful, requesters, giver
 
 def shortest_paths(graph, subscriber_ids, successful, requesters, givers, all_subscribers):
 	succ_short_paths = []
-	nosucc_short_paths = []
-	count = 0
+	unsucc_short_paths = []
+	giver_short_paths = []
+
 	for requester in requesters:
-		count += 1
-		print count
 		if requester in subscriber_ids:
 			if graph.has_node(subscriber_ids[requester]):
 				(tree, dists) = shortest_path(graph, subscriber_ids[requester])
 				for target, value in dists.items():
 					if all_subscribers[target] in givers:
-						print 'here'
-						if successful[requester] == all_subscribers[target]:
+						if requester in successful:
 							succ_short_paths.append(dists[target])
 						else:
-							nosucc_short_paths.append(dists[target])
+							unsucc_short_paths.append(dists[target])
 
-	print "Successful: ", sum(succ_short_paths) / float(len(succ_short_paths))
-	print "Unsuccessful: ", sum(nosucc_short_paths) / float(len(nosucc_short_paths))
+	for giver in givers:
+		if giver in subscriber_ids:
+			if graph.has_node(subscriber_ids[giver]):
+				(trees, dist) = shortest_path(graph, subscriber_ids[giver])
+				for target, value in dists.items():
+					if all_subscribers[target] in requesters or all_subscribers[target] in givers:
+						giver_short_paths.append(dists[target])
+
+	t, p = ttest_ind(succ_short_paths, unsucc_short_paths, equal_var=False)
+	print 'Successful vs. unsuccessful shortest paths: ', t, p
+
+	t, p = ttest_ind(succ_short_paths, giver_short_paths, equal_var=False)
+	print 'Successful vs. giver shortest paths: ', t, p
+
+	t, p = ttest_ind(unsucc_short_paths, giver_short_paths, equal_var=False)
+	print 'Unsuccessful vs. giver shortest paths: ', t, p	
+
+	print "Successful shortest paths: ", sum(succ_short_paths) / float(len(succ_short_paths))
+	print "Unsuccessful shortest paths: ", sum(unsucc_short_paths) / float(len(unsucc_short_paths))
+	print "Giver shortest paths: ", sum(giver_short_paths) / float(len(giver_short_paths))
 
 def coarsening(edges, subscriber_ids, weights, num_clusters):
 	weights = weights.tolist()
@@ -342,17 +387,28 @@ def clusters_to_matrices():
 	for i in xrange(len(nodes)):
 		degrees_vector.append(sum(weights_matrix[i]))
 
-	print degrees_vector
-
 	degrees_vector_f = open('coarsening_degrees_vector.txt', 'w')
 	dill.dump(degrees_vector, degrees_vector_f)
 	degrees_vector_f.close()
+
+def assign_clusters():
+	f = open('coarsening_data/top_km.txt', 'r')
+	top_km = dill.load(f)
+	f.close()
+
+	f2 = open('coarsening_data/top_km_counters.txt', 'r')
+	top_km_counters = dill.load(f2)
+	f2.close()
+
+	print top_km
+	print top_km_counters
 
 def main():
 	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers = init()
 	# coarsening(edges, subscriber_ids, weights, 500)
 	# clusters_to_matrices()
-	degree(edges, weights, subscriber_ids, successful, requesters, givers)
+	assign_clusters()
+	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph, all_subscribers, successful, requesters, givers)
 	# shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
 
