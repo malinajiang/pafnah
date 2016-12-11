@@ -410,51 +410,46 @@ def clusters_to_matrices():
 	degrees_vector_f.close()
 
 def uncoarsening():
-	f = open('coarsening_data/top_km.txt', 'r')
+	f = open('coarsening_data_new/top_km.txt', 'r')
 	top_km = dill.load(f)
 	f.close()
 
-	f2 = open('coarsening_data/top_km_counters.txt', 'r')
+	f2 = open('coarsening_data_new/top_km_counters.txt', 'r')
 	top_km_counters = dill.load(f2)
 	f2.close()
 
-	clusters_f = open('coarsening_data/clusters_11.txt', 'r')
+	clusters_f = open('coarsening_data_new/clusters_5.txt', 'r')
 	clusters = dill.load(clusters_f)
 	clusters_f.close()
 	print 'Loaded coarsening clusters'
 
 	uncoarsened_clusters = list()
 
-	total = 0
-	for x in clusters:
-		total += len(clusters[x]) + 1
+	nodes = sorted(clusters.keys())
+	num_nodes = 3932
 
-	print total
+	for i in xrange(len(top_km)):
+		num_clusters = top_km[i].n_clusters
+		assignment = top_km[i].labels_
+		kmeans_cluster = [0] * num_nodes
 
-	# nodes = sorted(clusters.keys())
-	# for i in xrange(len(top_km)):
-	# 	assignment = top_km[i].labels_
-	# 	kmeans_cluster = [0] * 
+		for j in xrange(len(nodes)):
+			for k in clusters[nodes[j]]:
+				kmeans_cluster[k] = assignment[j]
+		uncoarsened_clusters.append((num_clusters, kmeans_cluster))
 
-	# 	for j in xrange(len(nodes)):
-	# 		kmeans_cluster.
-
-		
-
-
-	# print [(i, top_km[i].n_clusters) for i in xrange(len(top_km))]
-	# print top_km_counters
-
-	print top_km[21].labels_
+	f = open('uncoarsened_kmeans.txt', 'w')
+	dill.dump(uncoarsened_clusters, f)
+	f.close()
 
 def main():
 	edges, subscriber_ids, weights, graph, shortest_graph, successful, requesters, givers, all_subscribers = init()
 	# coarsening(edges, subscriber_ids, weights, 500)
-	clusters_to_matrices()
-	# uncoarsening()
+	# clusters_to_matrices()
+	uncoarsening()
 	# degree(edges, weights, subscriber_ids, successful, requesters, givers)
 	# betweenness_centrality(graph, all_subscribers, successful, requesters, givers)
-	shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
+	# shortest_paths(shortest_graph, subscriber_ids, successful, requesters, givers, all_subscribers)
 
 if __name__ == '__main__':
 	main()
