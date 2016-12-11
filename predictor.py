@@ -9,101 +9,91 @@ import collections
 import math
 import sys
 import ast
-import codecs
 import json
+import dill
 from util import *
 from collections import Counter
 
-def read_dataset(path):
-  with codecs.open(path, 'r', 'utf-8') as myFile:
-    content = myFile.read()
-  dataset = json.loads(content)
-  train = []
-  dev = []
-  for i in xrange(len(dataset)):
-    if dataset[i]['in_test_set']:
-        train.append(dataset[i])
-    else:
-        dev.append(dataset[i])
-  return (train, dev)
+def read_dataset():
+    train = {}
+    dev = {}
 
-def extract_features(request):
+    f = open('degrees_filtered.txt', 'r')
+    degrees = dill.load(f)
+    f.close()
+    f2 = open('betweenness_centrality_filtered.txt', 'r')
+    between = dill.load(f2)
+    f2.close()
+    f3 = open('successful_requests.txt', 'r')
+    successful = dill.load(f3)
+    f3.close()
+    f4 = open('pizza_requesters.txt', 'r')
+    requesters = dill.load(f4)
+    f4.close()
+    f5 = open('./data/indices.txt','r')
+    indices = dill.load(f5)
+    f5.close()
+
+    for k, v in degrees.items():
+        if indices[k] in requesters:
+            features = {}
+            features['degree'] = v
+            features['betweenness'] = between[k]
+            train[k] = features
+            dev[k] = features
+
+    return (train, dev, successful, indices)
+
+def extract_features(ID, request, success, indices):
     """
     Extract features for a face corresponding to the face_id and with
     attributes in the dict face_attrs.
     """
     feature_vector = collections.defaultdict(lambda: 0)
 
-    # Karma -> need API
-
     # Existence in top 10 subreddits
-    feature_vector['AskReddit'] = 1 if 'AskReddit' in request['requester_subreddits_at_request'] else 0
+    feature_vector['degree'] = request['degree']
+    feature_vector['between'] = request['degree']
     
-    feature_vector['promos'] = 1 if 'promos' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['Loans'] = 1 if 'Loans' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['RandomActsOfCookies'] = 1 if 'RandomActsOfCookies' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['sharedota2'] = 1 if 'sharedota2' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['Random_Acts_Of_Pizza'] = 1 if 'Random_Acts_Of_Pizza' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['reportthespammers'] = 1 if 'reportthespammers' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['codbo'] = 1 if 'codbo' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['sc2partners'] = 1 if 'sc2partners' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['Assistance'] = 1 if 'Assistance' in request['requester_subreddits_at_request'] else 0
-
-    feature_vector['t:heatdeathoftheuniverse'] = 1 if 't:heatdeathoftheuniverse' in request['requester_subreddits_at_request'] else 0
-    
-    # Length of the textpost
-    text = request['request_text'].split()
-    feature_vector['length_textpost'] = len(text)
-
-    # user similarity with giver -> need API
-
-    # Number of comments on post
-    feature_vector['num_comments'] = request['request_number_of_comments_at_retrieval']
-    # Post upvotes - downvotes
-    feature_vector['textpost_upvotes_minus_downvotes'] = request['number_of_upvotes_of_request_at_retrieval'] - request['number_of_downvotes_of_request_at_retrieval']
-
-    # requester_upvotes_minus_downvotes_at_request
-    feature_vector['requester_upvotes_minus_downvotes'] = request['requester_number_of_posts_on_raop_at_request']
 
     # request received pizza 
-    success = 1 if request['requester_received_pizza'] else -1
+    success = 1 if indices[ID] in success else -1
 
     return feature_vector, success
 
 
 def learn_predictor(evaluate):
-    train_data, dev_data = read_dataset('./pizza_request_dataset/pizza_request_dataset.json')
+    train_data, dev_data, successful, indices = read_dataset()
     weights = collections.defaultdict(lambda: 0)  # feature => weight
     num_iters = 500
 
     for t in range(num_iters):
-        eta = .06 # .00001
-        for request in train_data:
-            feature_vector, success = extract_features(request)
+        eta = .0000001 # .0000001
+        for ID, features in train_data.items():
+            feature_vector, success = extract_features(ID, features, successful, indices)
             dotProd = (dot_product(feature_vector, weights))*success
-        if dotProd < 1:
-            increment(weights, eta * success, feature_vector)
+            if dotProd < 1:
+                increment(weights, eta * success, feature_vector)
 
         # train_correct = evaluate_predictor(train_data, extract_features, weights)
         # dev_correct = evaluate_predictor(dev_data, extract_features, weights)
         # print "Official: train = %s, dev = %s" % (train_correct, dev_correct)
 
     if evaluate:
-
+        rando = 0
         correct = 0
-        for request in dev_data:
-            feature_vector, success = extract_features(request)
+        for ID, features in dev_data.items():
+            feature_vector, success = extract_features(ID, features, successful, indices)
             score = dot_product(weights, feature_vector)
             if abs(success - score) <= 0.5: correct += 1
+            r = random.randint(0,1)
+            if r == 1 and success == 1:
+                rando += 1
+            elif r == 0 and success == -1:
+                rando += 1
+
         print 'correct: ' + str(correct)
+        print 'random: ' + str(float(rando)/len(dev_data))
         print 'percentage: ' + str(float(correct)/len(dev_data))
     
     print weights
