@@ -428,6 +428,8 @@ def uncoarsening():
 	nodes = sorted(clusters.keys())
 	num_nodes = 3932
 
+	print len(top_km)
+
 	for i in xrange(len(top_km)):
 		num_clusters = top_km[i].n_clusters
 		assignment = top_km[i].labels_

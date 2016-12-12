@@ -40,6 +40,15 @@ def read_dataset():
     shorts = dill.load(f6)
     f6.close()
 
+    f7 = open('coarsening_data_new/110_labels.txt')
+    coarsening_labels = dill.load(f7)
+    f7.close()
+
+    clusters_counts = dict([x, coarsening_labels.count(x)] for x in coarsening_labels)
+    top_clusters = sorted(clusters_counts, key = lambda x: clusters_counts[x], reverse = True)[:5]
+    large_clusters = [x for x in clusters_counts if clusters_counts[x] > 1]
+    print large_clusters
+
     for requester in requesters:
         if requester not in subscriber_ids or subscriber_ids[requester] not in degrees:
             continue
@@ -47,8 +56,17 @@ def read_dataset():
         index = subscriber_ids[requester]
         features = {}
         features['degree'] = degrees[index]
-        features['between'] = between[index]
+        # features['between'] = between[index]
         features['short'] = shorts[requester]
+
+        for i in xrange(110):
+            if i not in large_clusters:
+                continue
+
+            if coarsening_labels[index] == i:
+                features['cluster_' + str(i)] = 1
+            else:
+                features['cluster_' + str(i)] = 0
 
         train[requester] = features
         dev[requester] = features
@@ -60,7 +78,7 @@ def learn_predictor(train, dev, successful, subscriber_ids, evaluate):
     num_iters = 500
 
     for t in range(num_iters):
-        eta = 0.0000001
+        eta = 0.001
         
         for requester, features in train.items():
             success = 1 if requester in successful else -1
@@ -106,7 +124,7 @@ def main():
     print weights
 
     # random
-    # 0.4850
+    # 0.4711
 
     # degree
     # 0.01, 0.5763
@@ -117,11 +135,27 @@ def main():
     # shortest path
     # 0.01, 0.8871
 
+    # clusters
+    # 0.01, 0.8954
+
+    # top 5 clusters
+    # 0.01, 0.6637
+
     # degree, shortest path
     # 0.0001, 0.8860
 
     # degree, betweenness, shortest path
     # 0.0000001, 0.3935
+
+    # degree, shortest path, clusters
+    # 0.001, 0.8898
+
+    # degree, shortest path, top 5 clusters
+    # 0.001, 0.8871
+
+    # degree, shortest path, large clusters
+    # 0.01, 0.8135
+    # 0.01, 0.8910
 
 if __name__ == "__main__":
     main()
