@@ -47,7 +47,6 @@ def read_dataset():
     clusters_counts = dict([x, coarsening_labels.count(x)] for x in coarsening_labels)
     top_clusters = sorted(clusters_counts, key = lambda x: clusters_counts[x], reverse = True)[:5]
     large_clusters = [x for x in clusters_counts if clusters_counts[x] > 1]
-    print large_clusters
 
     for requester in requesters:
         if requester not in subscriber_ids or subscriber_ids[requester] not in degrees:
@@ -60,8 +59,8 @@ def read_dataset():
         features['short'] = shorts[requester]
 
         for i in xrange(110):
-            if i not in large_clusters:
-                continue
+            # if i not in large_clusters:
+            #     continue
 
             if coarsening_labels[index] == i:
                 features['cluster_' + str(i)] = 1
@@ -120,8 +119,6 @@ def main():
 
     print learn_correct / float(len(dev))
     print rand_correct / float(len(dev))
-
-    print weights
 
     # random
     # 0.4711
