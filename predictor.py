@@ -13,7 +13,14 @@ import json
 import dill
 from util import *
 from collections import Counter
-
+#(31, 2), (53, 2), (77, 2), (75, 5), (29, 6), (42, 6), (47, 6), (65, 6), (72, 6), (83, 6), (101, 6), (105, 6), (3, 7), (20, 7), 
+#(36, 7), (37, 7), (66, 7), (70, 7), (85, 7), (102, 7), (15, 8), (19, 8), (27, 8), (43, 8), (54, 8), (58, 8), (61, 8), (71, 8), 
+#(74, 8), (78, 8), (93, 9), (30, 10), (62, 10), (86, 10), (100, 10), (108, 10), (23, 11), (81, 11), (104, 11), (21, 12), (33, 12), 
+#(48, 12), (79, 12), (88, 12), (90, 12), (68, 14), (94, 14), (97, 14), (82, 15), (96, 15), (40, 17), (45, 17), (63, 17), (99, 18), 
+#(52, 19), (57, 19), (44, 21), (64, 21), (73, 21), (76, 21), (87, 22), (92, 26), (67, 29), (84, 32), (6, 35), (56, 36), (55, 40), 
+#(107, 42), (1, 49), (106, 68), (103, 72), (0, 74), (26, 78), (109, 78), (89, 79), (91, 129), (2, 176), (9, 278), (5, 336), (69, 1601)
+usedlabels = []
+numclusters = 50
 def read_dataset():
     train = {}
     dev = {}
@@ -42,15 +49,32 @@ def read_dataset():
     shorts = dill.load(f6)
     f6.close()
 
+    f7 = open('./data/120_labels.txt', 'r')
+    labels = dill.load(f7)
+    f7.close()
+
+    f8 = open('./data/goodlabels_120.txt', 'r')
+    goodlabels = dill.load(f8)
+    f8.close()
+
+    global numclusters
+    numclusters = len(goodlabels)
+
     for k, v in degrees.items():
         if indices[k] in requesters:
             features = {}
             features['degree'] = v
-            features['between'] = between[k]
+            # features['between'] = between[k]
             features['short'] = shorts[indices[k]]
+            for i in range(len(goodlabels)):
+                if len(usedlabels) != numclusters:
+                    usedlabels.append(goodlabels[i])
+                if labels[k] == goodlabels[i]:
+                    features['cluster_'+str(goodlabels[i])] = 1
+                else:
+                    features['cluster_'+str(goodlabels[i])] = 0
             train[k] = features
             dev[k] = features
-
     return (train, dev, successful, indices)
 
 def extract_features(ID, request, success, indices):
@@ -62,8 +86,10 @@ def extract_features(ID, request, success, indices):
 
     # Existence in top 10 subreddits
     feature_vector['degree'] = request['degree']
-    feature_vector['between'] = request['between']
+    # feature_vector['between'] = request['between']
     feature_vector['short'] = request['short']
+    for i in range(len(usedlabels)):
+        feature_vector['cluster_'+str(usedlabels[i])] = request['cluster_'+str(usedlabels[i])]
 
     # request received pizza 
     success = 1 if indices[ID] in success else -1
@@ -77,7 +103,7 @@ def learn_predictor(evaluate):
     num_iters = 500
 
     for t in range(num_iters):
-        eta = .0000000000001 # .0000001
+        eta = .01 # .0000001
         for ID, features in train_data.items():
             feature_vector, success = extract_features(ID, features, successful, indices)
             dotProd = (dot_product(feature_vector, weights)) * success
@@ -103,11 +129,10 @@ def learn_predictor(evaluate):
             elif r == 0 and success == -1:
                 rando += 1
 
-        print 'correct: ' + str(correct)
+        print 'eta: '+ str(eta)
         print 'random: ' + str(float(rando)/len(dev_data))
         print 'percentage: ' + str(float(correct)/len(dev_data))
     
-    print weights
     return weights
 
 
